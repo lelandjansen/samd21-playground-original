@@ -1,10 +1,10 @@
 #include "sam.h"
+
 #include <tuple>
 #include <vector>
 #include <cstdlib>
 #include <memory>
 #include <functional>
-
 
 // resource for dynamic memory allocation:
 // https://arobenko.gitbooks.io/bare_metal_cpp/content/compiler_output/dyn_mem.html
@@ -42,10 +42,74 @@ void operator delete[](void *p,  std::nothrow_t) noexcept {
 }
 
 
+namespace device {
+
+class Led {
+  public:
+	Led() {
+		// Set as output
+		PORT->Group[1].DIRSET.reg = PORT_PB30;
+		//REG_PORT_DIRSET1 = PORT_PB30;
+		//alternately:
+		//REG_PORT_DIR1 |= PORT_PB30;
+		Off();
+	}
+	
+	~Led() {
+		Off();
+	}
+	
+	auto On() const -> void {
+		PORT->Group[1].OUTCLR.reg = PORT_PB30;
+		//REG_PORT_OUTCLR1 = PORT_PB30;
+		//alternatively:
+		//REG_PORT_OUT1 &= ~PORT_PB30;
+	}
+	
+	auto Off() const -> void {
+		PORT->Group[1].OUTSET.reg = PORT_PB30;
+		//REG_PORT_OUTSET1 = PORT_PB30;
+		//alternatively:
+		//REG_PORT_OUT1 |= PORT_PB30;
+	}
+	
+	auto Toggle() const -> void {
+		PORT->Group[1].OUTTGL.reg = PORT_PB30;
+
+		//REG_PORT_OUTTGL1 = PORT_PB30;
+		//alternatively:
+		//REG_PORT_OUT1 ^= PORT_PB30;
+	}	
+};
+
+class Button {
+  public:
+	Button() {
+		// Set input with pull-up resistor
+		//PORT->Group[0].PINCFG[15].reg = PORT_PINCFG_INEN | PORT_PINCFG_PULLEN;
+		PORT->Group[0].PINCFG[15].bit.INEN = true;
+		PORT->Group[0].PINCFG[15].bit.PULLEN = true;
+		PORT->Group[0].OUTSET.reg = PORT_PA15;
+		//REG_PORT_OUTSET0 = PORT_PA15;
+	}
+	
+	auto IsPressed() const -> bool {
+		return !(REG_PORT_IN0 & PORT_PA15);
+	}
+};
+
+}  // namespace device
+
+device::Led led;
+device::Button button;
 
 auto main() -> int {
     /* Initialize the SAM system */
     SystemInit();
+
+	while (true) {
+		button.IsPressed() ? led.On() : led.Off();
+	}
 	
 	auto v = std::vector<int>(10);
 	v.push_back(1);

@@ -534,6 +534,9 @@
     <Folder Include="src\config\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="src\config\conf_clocks.h">
+      <SubType>compile</SubType>
+    </Compile>
     <None Include="src\asf.h">
       <SubType>compile</SubType>
     </None>
@@ -816,9 +819,6 @@
     <None Include="src\ASF\common2\services\delay\delay.h">
       <SubType>compile</SubType>
     </None>
-    <Compile Include="conf_clocks.h">
-      <SubType>compile</SubType>
-    </Compile>
     <Compile Include="src\ASF\common2\services\delay\example\delay_example.c">
       <SubType>compile</SubType>
     </Compile>
