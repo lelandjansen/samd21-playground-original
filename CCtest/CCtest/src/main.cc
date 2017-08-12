@@ -6,6 +6,8 @@
 #include <memory>
 #include <functional>
 
+#include "setup.h"
+
 // resource for dynamic memory allocation:
 // https://arobenko.gitbooks.io/bare_metal_cpp/content/compiler_output/dyn_mem.html
 
@@ -106,10 +108,13 @@ device::Button button;
 auto main() -> int {
     /* Initialize the SAM system */
     SystemInit();
+	SetupClock();
+	EnableExternalInterrupts();
+	InitTC3();
 
-	while (true) {
-		button.IsPressed() ? led.On() : led.Off();
-	}
+	//while (true) {
+		//button.IsPressed() ? led.On() : led.Off();
+	//}
 	
 	auto v = std::vector<int>(10);
 	v.push_back(1);
