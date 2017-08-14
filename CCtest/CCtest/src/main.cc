@@ -1,120 +1,34 @@
-#include "sam.h"
-
 #include <tuple>
 #include <vector>
 #include <cstdlib>
 #include <memory>
 #include <functional>
+#include <cstdint>
 
-#include "setup.h"
-
-// resource for dynamic memory allocation:
-// https://arobenko.gitbooks.io/bare_metal_cpp/content/compiler_output/dyn_mem.html
-
-void* operator new(size_t size) noexcept {
-	return malloc(size);
-}
-
-void operator delete(void *p) noexcept {
-	free(p);
-}
-
-void* operator new[](size_t size) noexcept {
-	return operator new(size); // Same as regular new
-}
-
-void operator delete[](void *p) noexcept {
-	operator delete(p); // Same as regular delete
-}
-
-void* operator new(size_t size, std::nothrow_t) noexcept {
-	return operator new(size); // Same as regular new
-}
-
-void operator delete(void *p,  std::nothrow_t) noexcept {
-	operator delete(p); // Same as regular delete
-}
-
-void* operator new[](size_t size, std::nothrow_t) noexcept {
-	return operator new(size); // Same as regular new
-}
-
-void operator delete[](void *p,  std::nothrow_t) noexcept {
-	operator delete(p); // Same as regular delete
-}
-
-
-namespace device {
-
-class Led {
-  public:
-	Led() {
-		// Set as output
-		PORT->Group[1].DIRSET.reg = PORT_PB30;
-		//REG_PORT_DIRSET1 = PORT_PB30;
-		//alternately:
-		//REG_PORT_DIR1 |= PORT_PB30;
-		Off();
-	}
-	
-	~Led() {
-		Off();
-	}
-	
-	auto On() const -> void {
-		PORT->Group[1].OUTCLR.reg = PORT_PB30;
-		//REG_PORT_OUTCLR1 = PORT_PB30;
-		//alternatively:
-		//REG_PORT_OUT1 &= ~PORT_PB30;
-	}
-	
-	auto Off() const -> void {
-		PORT->Group[1].OUTSET.reg = PORT_PB30;
-		//REG_PORT_OUTSET1 = PORT_PB30;
-		//alternatively:
-		//REG_PORT_OUT1 |= PORT_PB30;
-	}
-	
-	auto Toggle() const -> void {
-		PORT->Group[1].OUTTGL.reg = PORT_PB30;
-
-		//REG_PORT_OUTTGL1 = PORT_PB30;
-		//alternatively:
-		//REG_PORT_OUT1 ^= PORT_PB30;
-	}	
-};
-
-class Button {
-  public:
-	Button() {
-		// Set input with pull-up resistor
-		//PORT->Group[0].PINCFG[15].reg = PORT_PINCFG_INEN | PORT_PINCFG_PULLEN;
-		PORT->Group[0].PINCFG[15].bit.INEN = true;
-		PORT->Group[0].PINCFG[15].bit.PULLEN = true;
-		PORT->Group[0].OUTSET.reg = PORT_PA15;
-		//REG_PORT_OUTSET0 = PORT_PA15;
-	}
-	
-	auto IsPressed() const -> bool {
-		return !(REG_PORT_IN0 & PORT_PA15);
-	}
-};
-
-}  // namespace device
-
-device::Led led;
-device::Button button;
+#include "bare-metal/dynamic-memory.h"
+#include "sam.h"
+#include "perhipial/button.h"
+#include "perhipial/led.h"
+#include "util/clock.h"
+#include "util/delay.h"
 
 auto main() -> int {
-    /* Initialize the SAM system */
-    SystemInit();
-	SetupClock();
-	EnableExternalInterrupts();
-	InitTC3();
+	util::ClockInit();
+	util::DelayInit();
+	//EnableExternalInterrupts();
+	//InitTC3();
+
+  perhipial::Led led(1, PORT_PB30);
+  perhipial::Button button;
 
 	//while (true) {
-		//button.IsPressed() ? led.On() : led.Off();
+		//button.IsPressed() ? led1.On() : led1.Off();
 	//}
+
+  while (true) {
+		led.Toggle();
+		util::DelayMilliseconds(500);
+	}
 	
 	auto v = std::vector<int>(10);
 	v.push_back(1);
@@ -142,10 +56,8 @@ auto main() -> int {
 	
 	// disable thread safe statics:
 	// -fno-threadsafe-statics
-	// This is safe so long as interrups aren't enabled
+	// This is safe so long as interrupts aren't enabled
 	
 	// if i choose to have abstract functions, might need to implement the delete operator
 	// https://arobenko.gitbooks.io/bare_metal_cpp/content/compiler_output/abstract_classes.html
-
-    while (true);
 }

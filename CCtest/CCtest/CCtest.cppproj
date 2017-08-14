@@ -140,7 +140,8 @@
         <armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>
         <armgcccpp.compiler.optimization.DebugLevel>Maximum (-g3)</armgcccpp.compiler.optimization.DebugLevel>
         <armgcccpp.compiler.warnings.AllWarnings>True</armgcccpp.compiler.warnings.AllWarnings>
-        <armgcccpp.compiler.miscellaneous.OtherFlags>-std=c++1y -fno-exceptions -fno-unwind-tables</armgcccpp.compiler.miscellaneous.OtherFlags>
+        <armgcccpp.compiler.warnings.ExtraWarnings>True</armgcccpp.compiler.warnings.ExtraWarnings>
+        <armgcccpp.compiler.miscellaneous.OtherFlags>-std=c++1y -fno-unwind-tables</armgcccpp.compiler.miscellaneous.OtherFlags>
         <armgcccpp.linker.libraries.Libraries>
           <ListValues>
             <Value>libm</Value>
@@ -178,27 +179,64 @@
     <Compile Include="Device_Startup\system_samd21.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="src\conf\conf_clocks.h">
+    <Compile Include="src\bare-metal\dynamic-memory.cc">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\bare-metal\dynamic-memory.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\main.cc">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="src\setup.c">
+    <Compile Include="src\interrupts.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="src\setup.h">
+    <Compile Include="src\interrupts.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="src\utils\syscalls.c">
+    <Compile Include="src\perhipial\button.cc">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\perhipial\button.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\perhipial\led.cc">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\perhipial\led.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\util\clock.cc">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\util\clock.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\util\delay.cc">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\util\delay.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\util\reset.cc">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\util\reset.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\util\syscalls.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\util\wait.h">
       <SubType>compile</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Device_Startup\" />
     <Folder Include="src" />
-    <Folder Include="src\conf" />
-    <Folder Include="src\utils" />
+    <Folder Include="src\bare-metal" />
+    <Folder Include="src\perhipial" />
+    <Folder Include="src\util" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Device_Startup\samd21j18a_flash.ld">
