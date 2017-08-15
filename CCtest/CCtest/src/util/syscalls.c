@@ -125,6 +125,16 @@ extern int _getpid(void)
 	return -1;
 }
 
+// TODO(lelandjansen): Implement _read
+extern int _read(int file, char *ptr, int len) {
+  return -1;
+}
+
+// TODO(lelandjansen): Implement _write
+extern int _write(int file, char *ptr, int len) {
+  return -1;
+}
+
 #ifdef __cplusplus
 }
 #endif

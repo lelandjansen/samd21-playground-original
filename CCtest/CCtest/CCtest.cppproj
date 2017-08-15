@@ -121,7 +121,7 @@
             <Value>%24(PackRepoDir)\arm\CMSIS\4.2.0\CMSIS\Include\</Value>
           </ListValues>
         </armgcc.compiler.directories.IncludePaths>
-        <armgcc.compiler.optimization.level>Optimize (-O1)</armgcc.compiler.optimization.level>
+        <armgcc.compiler.optimization.level>Optimize most (-O3)</armgcc.compiler.optimization.level>
         <armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcc.compiler.optimization.PrepareFunctionsForGarbageCollection>
         <armgcc.compiler.optimization.DebugLevel>Maximum (-g3)</armgcc.compiler.optimization.DebugLevel>
         <armgcc.compiler.warnings.AllWarnings>True</armgcc.compiler.warnings.AllWarnings>
@@ -136,11 +136,13 @@
             <Value>%24(PackRepoDir)\arm\CMSIS\4.2.0\CMSIS\Include\</Value>
           </ListValues>
         </armgcccpp.compiler.directories.IncludePaths>
-        <armgcccpp.compiler.optimization.level>Optimize (-O1)</armgcccpp.compiler.optimization.level>
+        <armgcccpp.compiler.optimization.level>Optimize most (-O3)</armgcccpp.compiler.optimization.level>
         <armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>True</armgcccpp.compiler.optimization.PrepareFunctionsForGarbageCollection>
         <armgcccpp.compiler.optimization.DebugLevel>Maximum (-g3)</armgcccpp.compiler.optimization.DebugLevel>
         <armgcccpp.compiler.warnings.AllWarnings>True</armgcccpp.compiler.warnings.AllWarnings>
         <armgcccpp.compiler.warnings.ExtraWarnings>True</armgcccpp.compiler.warnings.ExtraWarnings>
+        <armgcccpp.compiler.warnings.Undefined>True</armgcccpp.compiler.warnings.Undefined>
+        <armgcccpp.compiler.warnings.Pedantic>True</armgcccpp.compiler.warnings.Pedantic>
         <armgcccpp.compiler.miscellaneous.OtherFlags>-std=c++1y -fno-unwind-tables</armgcccpp.compiler.miscellaneous.OtherFlags>
         <armgcccpp.linker.libraries.Libraries>
           <ListValues>
@@ -194,16 +196,31 @@
     <Compile Include="src\interrupts.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="src\perhipial\button.cc">
+    <Compile Include="src\perhipial\button\sw0.cc">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="src\perhipial\button.h">
+    <Compile Include="src\perhipial\button\sw0.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="src\perhipial\led.cc">
+    <Compile Include="src\perhipial\button\gpio-button-interface.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="src\perhipial\led.h">
+    <Compile Include="src\perhipial\led\gpio-led-interface.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\perhipial\led\io1-led.cc">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\perhipial\led\io1-led.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\perhipial\led\led0.cc">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\perhipial\led\led0.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\perhipial\led\pwm-led-interface.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\util\clock.cc">
@@ -236,6 +253,8 @@
     <Folder Include="src" />
     <Folder Include="src\bare-metal" />
     <Folder Include="src\perhipial" />
+    <Folder Include="src\perhipial\led" />
+    <Folder Include="src\perhipial\button" />
     <Folder Include="src\util" />
   </ItemGroup>
   <ItemGroup>

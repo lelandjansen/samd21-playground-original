@@ -125,6 +125,8 @@ extern int _getpid(void)
 	return -1;
 }
 
+extern int _read()
+
 #ifdef __cplusplus
 }
 #endif

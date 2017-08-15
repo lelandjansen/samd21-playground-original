@@ -7,8 +7,9 @@
 
 #include "bare-metal/dynamic-memory.h"
 #include "sam.h"
-#include "perhipial/button.h"
-#include "perhipial/led.h"
+#include "perhipial/button/sw0.h"
+#include "perhipial/led/led0.h"
+#include "perhipial/led/io1-led.h"
 #include "util/clock.h"
 #include "util/delay.h"
 
@@ -18,8 +19,9 @@ auto main() -> int {
 	//EnableExternalInterrupts();
 	//InitTC3();
 
-  perhipial::Led led(1, PORT_PB30);
-  perhipial::Button button;
+  perhipial::Led0 led;
+  perhipial::Io1Led led2;
+  perhipial::Sw0 button;
 
 	//while (true) {
 		//button.IsPressed() ? led1.On() : led1.Off();
@@ -27,7 +29,11 @@ auto main() -> int {
 
   while (true) {
 		led.Toggle();
+    led2.Toggle();
 		util::DelayMilliseconds(500);
+    led2.Toggle();
+    util::DelayMilliseconds(500);
+
 	}
 	
 	auto v = std::vector<int>(10);
