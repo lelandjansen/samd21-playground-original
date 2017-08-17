@@ -7,4 +7,8 @@
 #define WAIT_UNTIL(expression) [&]{ while (!(expression)); }()
 #endif
 
+#ifdef __cplusplus
+#define WAIT_WHILE(expression) [&]{ while (expression); }()
+#endif
+
 #endif // UTIL_WAIT_H_

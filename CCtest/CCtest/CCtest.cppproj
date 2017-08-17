@@ -214,6 +214,24 @@
     <Compile Include="src\perhipial\led\io1-led.h">
       <SubType>compile</SubType>
     </Compile>
+    <Compile Include="src\perhipial\led\led-blue.cc">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\perhipial\led\led-blue.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\perhipial\led\led-green.cc">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\perhipial\led\led-green.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\perhipial\led\led-red.cc">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\perhipial\led\led-red.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="src\perhipial\led\led0.cc">
       <SubType>compile</SubType>
     </Compile>

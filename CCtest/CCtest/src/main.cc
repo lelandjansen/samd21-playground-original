@@ -10,6 +10,9 @@
 #include "perhipial/button/sw0.h"
 #include "perhipial/led/led0.h"
 #include "perhipial/led/io1-led.h"
+#include "perhipial/led/led-green.h"
+#include "perhipial/led/led-blue.h"
+#include "perhipial/led/led-red.h"
 #include "util/clock.h"
 #include "util/delay.h"
 
@@ -19,21 +22,22 @@ auto main() -> int {
 	//EnableExternalInterrupts();
 	//InitTC3();
 
-  perhipial::Led0 led;
-  perhipial::Io1Led led2;
+  perhipial::Led0 led0;
+  //perhipial::LedRed red;
+  perhipial::LedGreen green;
+  //perhipial::LedBlue blue;
+  perhipial::Io1Led io1_led;
   perhipial::Sw0 button;
 
 	//while (true) {
 		//button.IsPressed() ? led1.On() : led1.Off();
 	//}
 
+  led0.Toggle();  
   while (true) {
-		led.Toggle();
-    led2.Toggle();
-		util::DelayMilliseconds(500);
-    led2.Toggle();
-    util::DelayMilliseconds(500);
-
+		led0.Toggle();
+    io1_led.Toggle();
+    util::DelayMilliseconds(1000);
 	}
 	
 	auto v = std::vector<int>(10);

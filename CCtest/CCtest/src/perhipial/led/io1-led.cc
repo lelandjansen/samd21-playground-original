@@ -3,6 +3,7 @@
 #include <cassert>
 
 #include "sam.h"
+#include "../../util/wait.h"
 
 namespace perhipial {
 
