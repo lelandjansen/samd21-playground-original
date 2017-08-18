@@ -1,13 +1,12 @@
 #ifndef UTIL_WAIT_H_
 #define UTIL_WAIT_H_
 
-// WAIT_UNTIL translates to a lambda because using the macro but forgetting the semicolon
-// will compile and cause a weird runtime error.
+// Using a lambda because 
+// #define WAIT_UNTIL(expression) while (!expression)
+// will still compile if the simicolon is forgotten but will produce an 
+// unexpected runtime error.
 #ifdef __cplusplus
 #define WAIT_UNTIL(expression) [&]{ while (!(expression)); }()
-#endif
-
-#ifdef __cplusplus
 #define WAIT_WHILE(expression) [&]{ while (expression); }()
 #endif
 
