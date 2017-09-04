@@ -1,0 +1,8 @@
+/home/leland/projects/samd21-playground/cmake-playground/build/CMakeFiles/edit_cache.dir
+/home/leland/projects/samd21-playground/cmake-playground/build/CMakeFiles/rebuild_cache.dir
+/home/leland/projects/samd21-playground/cmake-playground/build/app/CMakeFiles/edit_cache.dir
+/home/leland/projects/samd21-playground/cmake-playground/build/app/CMakeFiles/rebuild_cache.dir
+/home/leland/projects/samd21-playground/cmake-playground/build/app/CMakeFiles/application.dir
+/home/leland/projects/samd21-playground/cmake-playground/build/lib/CMakeFiles/edit_cache.dir
+/home/leland/projects/samd21-playground/cmake-playground/build/lib/CMakeFiles/rebuild_cache.dir
+/home/leland/projects/samd21-playground/cmake-playground/build/lib/CMakeFiles/add.dir

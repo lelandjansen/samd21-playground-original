@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/leland/projects/samd21-playground/cmake-playground/src/app/main.cc
+lib/add.h
+/home/leland/projects/samd21-playground/cmake-playground/src/app/lib/add.h
+

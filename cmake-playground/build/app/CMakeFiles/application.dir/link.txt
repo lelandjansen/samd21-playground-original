@@ -1,0 +1,1 @@
+/usr/bin/arm-none-eabi-g++   --specs=rdimon.specs -lgcc -lc -lm -lrdimon -fno-exceptions   CMakeFiles/application.dir/main.cc.obj  -o application -laddlib 
