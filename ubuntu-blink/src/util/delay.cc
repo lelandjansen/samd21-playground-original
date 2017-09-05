@@ -2,9 +2,9 @@
 
 #include <cstdint>
 
-#include "sam.h"
-#include "util/wait.h"
-#include "util/clock.h"
+#include "samd21/samd21j18a.h"
+#include "wait.h"
+#include "clock.h"
 
 namespace util {
 

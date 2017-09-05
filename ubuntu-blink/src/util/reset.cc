@@ -1,7 +1,7 @@
 #include "reset.h"
 
-#include "sam.h"
-#include "util/wait.h"
+#include "samd21/samd21j18a.h"
+#include "wait.h"
 
 namespace util {
 

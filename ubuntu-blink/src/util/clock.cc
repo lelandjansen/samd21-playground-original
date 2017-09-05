@@ -1,7 +1,7 @@
 #include "clock.h"
 
 #include "util/reset.h"
-#include "sam.h"
+#include "samd21/samd21j18a.h"
 #include "util/wait.h"
 
 namespace util {
@@ -66,7 +66,7 @@ auto ClockInit() -> void {
 	SetGclk1AsGclk0MultiplexerSource();
 	EnableDfll48mClock();
 	SetGclk0GeneratorToDfll48m();
-	SystemCoreClock = kMainClockFrequency;
+	// SystemCoreClock = kMainClockFrequency;
 }
 
 }  // namespace util
