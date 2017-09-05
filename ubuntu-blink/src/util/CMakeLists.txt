@@ -2,7 +2,7 @@ project(util)
 
 add_library(clock STATIC
   clock.cc)
-target_link_libraries(clock
+target_link_libraries(clock PRIVATE
   reset
   samd21j18a)
 target_include_directories(clock
@@ -10,7 +10,7 @@ target_include_directories(clock
 
 add_library(delay STATIC
   delay.cc)
-target_link_libraries(delay
+target_link_libraries(delay PRIVATE
   samd21j18a)
 target_include_directories(delay
   INTERFACE ${CMAKE_SOURCE_DIR})
@@ -22,14 +22,14 @@ target_include_directories(dynamic-memory
 
 add_library(reset STATIC
   reset.cc)
-target_link_libraries(reset
+target_link_libraries(reset PRIVATE
   samd21j18a)
 target_include_directories(reset
   INTERFACE ${CMAKE_SOURCE_DIR})
 
 add_library(syscalls STATIC
   syscalls.c)
-#target_link_libraries(syscalls
+#target_link_libraries(syscalls PRIVATE
 #  samd21j18a)
 target_include_directories(syscalls
   INTERFACE ${CMAKE_SOURCE_DIR})
