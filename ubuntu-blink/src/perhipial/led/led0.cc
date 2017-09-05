@@ -1,8 +1,8 @@
-#include "perhipial/led/led0.h"
+#include "led0.h"
 
 #include <cassert>
 
-#include "sam.h"
+#include "samd21/samd21j18a.h"
 
 namespace perhipial {
 

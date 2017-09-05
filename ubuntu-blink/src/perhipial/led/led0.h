@@ -1,7 +1,7 @@
 #ifndef PERHIPIAL_LED_LED0_H_
 #define PERHIPIAL_LED_LED0_H_
 
-#include "perhipial/led/gpio-led-interface.h"
+#include "gpio-led-interface.h"
 
 namespace perhipial {
 
