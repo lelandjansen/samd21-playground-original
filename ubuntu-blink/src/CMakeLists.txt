@@ -2,13 +2,28 @@ cmake_minimum_required(VERSION 3.2 FATAL_ERROR)
 
 set(CMAKE_SYSTEM_NAME Generic)
 set(CMAKE_SYSTEM_PROCESSOR arm-none-eabi)
-set(CMAKE_C_COMPILER /usr/bin/arm-none-eabi-gcc)
-set(CMAKE_CXX_COMPILER /usr/bin/arm-none-eabi-g++)
+set(CMAKE_C_COMPILER arm-none-eabi-gcc)
+set(CMAKE_CXX_COMPILER arm-none-eabi-g++)
+#set(CMAKE_LINKER arm-none-eabi-gcc)
 set(CMAKE_CXX_STANDARD 14)                                          
-set(CMAKE_C_FLAGS "--specs=rdimon.specs -lgcc -lc -lm -lrdimon")
-set(CMAKE_CXX_FLAGS "--specs=rdimon.specs -lgcc -lc -lm -lrdimon -fno-exceptions") 
-set(CMAKE_SHARED_LIBRARY_LINK_C_FLAGS "")
-set(CMAKE_SHARED_LIBRARY_LINK_CXX_FLAGS "")
+set(CMAKE_C_FLAGS "\
+  --specs=rdimon.specs \
+  -lgcc \
+  -lc \
+  -lm \
+  -lrdimon")
+set(CMAKE_CXX_FLAGS "\
+  --specs=rdimon.specs \
+  -lgcc \
+  -lc \
+  -lm \
+  -lrdimon \
+  -Wall \
+  -Wextra \
+  -Wpedantic \
+  -fno-exceptions") 
+#set(CMAKE_SHARED_LIBRARY_LINK_C_FLAGS "")
+#set(CMAKE_SHARED_LIBRARY_LINK_CXX_FLAGS "")
 
 project(UbuntuBlink)
 # enable_testing()
