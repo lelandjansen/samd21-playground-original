@@ -1,6 +1,6 @@
 #include "reset.h"
 
-#include "samd21/samd21j18a.h"
+#include "samd21/samd21.h"
 #include "wait.h"
 
 namespace util {
@@ -11,3 +11,4 @@ auto SoftwareReset() -> void {
 }
 
 }  // namespace util
+
