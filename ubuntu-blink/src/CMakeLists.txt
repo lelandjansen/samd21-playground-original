@@ -28,8 +28,11 @@ set(CMAKE_CXX_FLAGS "\
 project(UbuntuBlink)
 # enable_testing()
 add_subdirectory(app)
+add_subdirectory(build)
 add_subdirectory(cmsis)
 add_subdirectory(samd21)
 add_subdirectory(util)
 add_subdirectory(perhipial)
+
+add_definitions(-D__SAMD21J18A__)
 

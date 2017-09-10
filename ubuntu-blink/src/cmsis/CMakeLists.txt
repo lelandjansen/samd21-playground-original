@@ -1,9 +1,7 @@
 project(cmsis)
 
-add_library(cmsis_core STATIC
-  cmsis_core.c)
-target_link_libraries(cmsis_core PRIVATE
-  samd21j18a)
-target_include_directories(cmsis_core
+add_library(cmsis STATIC
+    core_cm0plus.h)
+target_include_directories(cmsis
   INTERFACE ${CMAKE_SOURCE_DIR})
 

@@ -2,7 +2,7 @@
 
 #include <cassert>
 
-#include "samd21/samd21j18a.h"
+#include "samd21/samd21.h"
 
 namespace perhipial {
 

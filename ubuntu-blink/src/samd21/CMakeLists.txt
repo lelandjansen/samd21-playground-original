@@ -1,9 +1,9 @@
 project(samd21)
 
-add_library(samd21j18a STATIC
-  samd21j18a.c)
-target_link_libraries(samd21j18a PRIVATE
-  cmsis_core)
-target_include_directories(samd21j18a
+add_library(samd21
+  samd21.h)
+target_link_libraries(samd21 PRIVATE
+  cmsis)
+target_include_directories(samd21
   INTERFACE ${CMAKE_SOURCE_DIR})
 
