@@ -13,19 +13,22 @@ target_link_libraries(blink PRIVATE
   startup
   clock
   delay
-  dynamic-memory
+  #dynamic-memory
   led
   samd21
-  syscalls)
+  #syscalls
+  )
 set_target_properties(blink PROPERTIES
   OUTPUT_NAME "blink.elf"
   #COMPILE_FLAGS "
   #  -mcpu=cortex-m0 \
   #  -mthumb \
   #  -g"
-  #  LINK_DEPENDS ${link_file}
-  LINK_FLAGS "-T${link_file} \
+  # COMPILE_FLAGS "-mcpu=cortex-m0 -mthumb -Wall -std=c++14"
+  LINK_FLAGS "
     -mthumb \
     -mcpu=cortex-m0 \
-    -Wl,--gc-sections")
-
+    -T${link_file} \
+    --specs=nosys.specs \
+    -Wl,--gc-sections"
+  LINK_DEPENDS ${link_file})

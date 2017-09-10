@@ -1,0 +1,3 @@
+/home/leland/projects/samd21-playground/omzlo-cmake/build/CMakeFiles/edit_cache.dir
+/home/leland/projects/samd21-playground/omzlo-cmake/build/CMakeFiles/rebuild_cache.dir
+/home/leland/projects/samd21-playground/omzlo-cmake/build/CMakeFiles/omzlo-cmake.dir
