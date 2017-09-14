@@ -57,28 +57,28 @@ include CMakeFiles/omzlo-cmake.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/omzlo-cmake.dir/flags.make
 
-CMakeFiles/omzlo-cmake.dir/main.c.obj: CMakeFiles/omzlo-cmake.dir/flags.make
-CMakeFiles/omzlo-cmake.dir/main.c.obj: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leland/projects/samd21-playground/omzlo-cmake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/omzlo-cmake.dir/main.c.obj"
-	/usr/bin/arm-none-eabi-gcc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/omzlo-cmake.dir/main.c.obj   -c /home/leland/projects/samd21-playground/omzlo-cmake/main.c
+CMakeFiles/omzlo-cmake.dir/main.cc.obj: CMakeFiles/omzlo-cmake.dir/flags.make
+CMakeFiles/omzlo-cmake.dir/main.cc.obj: ../main.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leland/projects/samd21-playground/omzlo-cmake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/omzlo-cmake.dir/main.cc.obj"
+	/usr/bin/arm-none-eabi-g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/omzlo-cmake.dir/main.cc.obj -c /home/leland/projects/samd21-playground/omzlo-cmake/main.cc
 
-CMakeFiles/omzlo-cmake.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/omzlo-cmake.dir/main.c.i"
-	/usr/bin/arm-none-eabi-gcc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/leland/projects/samd21-playground/omzlo-cmake/main.c > CMakeFiles/omzlo-cmake.dir/main.c.i
+CMakeFiles/omzlo-cmake.dir/main.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/omzlo-cmake.dir/main.cc.i"
+	/usr/bin/arm-none-eabi-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/leland/projects/samd21-playground/omzlo-cmake/main.cc > CMakeFiles/omzlo-cmake.dir/main.cc.i
 
-CMakeFiles/omzlo-cmake.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/omzlo-cmake.dir/main.c.s"
-	/usr/bin/arm-none-eabi-gcc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/leland/projects/samd21-playground/omzlo-cmake/main.c -o CMakeFiles/omzlo-cmake.dir/main.c.s
+CMakeFiles/omzlo-cmake.dir/main.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/omzlo-cmake.dir/main.cc.s"
+	/usr/bin/arm-none-eabi-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/leland/projects/samd21-playground/omzlo-cmake/main.cc -o CMakeFiles/omzlo-cmake.dir/main.cc.s
 
-CMakeFiles/omzlo-cmake.dir/main.c.obj.requires:
+CMakeFiles/omzlo-cmake.dir/main.cc.obj.requires:
 
-.PHONY : CMakeFiles/omzlo-cmake.dir/main.c.obj.requires
+.PHONY : CMakeFiles/omzlo-cmake.dir/main.cc.obj.requires
 
-CMakeFiles/omzlo-cmake.dir/main.c.obj.provides: CMakeFiles/omzlo-cmake.dir/main.c.obj.requires
-	$(MAKE) -f CMakeFiles/omzlo-cmake.dir/build.make CMakeFiles/omzlo-cmake.dir/main.c.obj.provides.build
-.PHONY : CMakeFiles/omzlo-cmake.dir/main.c.obj.provides
+CMakeFiles/omzlo-cmake.dir/main.cc.obj.provides: CMakeFiles/omzlo-cmake.dir/main.cc.obj.requires
+	$(MAKE) -f CMakeFiles/omzlo-cmake.dir/build.make CMakeFiles/omzlo-cmake.dir/main.cc.obj.provides.build
+.PHONY : CMakeFiles/omzlo-cmake.dir/main.cc.obj.provides
 
-CMakeFiles/omzlo-cmake.dir/main.c.obj.provides.build: CMakeFiles/omzlo-cmake.dir/main.c.obj
+CMakeFiles/omzlo-cmake.dir/main.cc.obj.provides.build: CMakeFiles/omzlo-cmake.dir/main.cc.obj
 
 
 CMakeFiles/omzlo-cmake.dir/startup_samd21.c.obj: CMakeFiles/omzlo-cmake.dir/flags.make
@@ -131,19 +131,19 @@ CMakeFiles/omzlo-cmake.dir/system_samd21.c.obj.provides.build: CMakeFiles/omzlo-
 
 # Object files for target omzlo-cmake
 omzlo__cmake_OBJECTS = \
-"CMakeFiles/omzlo-cmake.dir/main.c.obj" \
+"CMakeFiles/omzlo-cmake.dir/main.cc.obj" \
 "CMakeFiles/omzlo-cmake.dir/startup_samd21.c.obj" \
 "CMakeFiles/omzlo-cmake.dir/system_samd21.c.obj"
 
 # External object files for target omzlo-cmake
 omzlo__cmake_EXTERNAL_OBJECTS =
 
-omzlo-cmake.elf: CMakeFiles/omzlo-cmake.dir/main.c.obj
+omzlo-cmake.elf: CMakeFiles/omzlo-cmake.dir/main.cc.obj
 omzlo-cmake.elf: CMakeFiles/omzlo-cmake.dir/startup_samd21.c.obj
 omzlo-cmake.elf: CMakeFiles/omzlo-cmake.dir/system_samd21.c.obj
 omzlo-cmake.elf: CMakeFiles/omzlo-cmake.dir/build.make
 omzlo-cmake.elf: CMakeFiles/omzlo-cmake.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/leland/projects/samd21-playground/omzlo-cmake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable omzlo-cmake.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/leland/projects/samd21-playground/omzlo-cmake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable omzlo-cmake.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/omzlo-cmake.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -151,7 +151,7 @@ CMakeFiles/omzlo-cmake.dir/build: omzlo-cmake.elf
 
 .PHONY : CMakeFiles/omzlo-cmake.dir/build
 
-CMakeFiles/omzlo-cmake.dir/requires: CMakeFiles/omzlo-cmake.dir/main.c.obj.requires
+CMakeFiles/omzlo-cmake.dir/requires: CMakeFiles/omzlo-cmake.dir/main.cc.obj.requires
 CMakeFiles/omzlo-cmake.dir/requires: CMakeFiles/omzlo-cmake.dir/startup_samd21.c.obj.requires
 CMakeFiles/omzlo-cmake.dir/requires: CMakeFiles/omzlo-cmake.dir/system_samd21.c.obj.requires
 

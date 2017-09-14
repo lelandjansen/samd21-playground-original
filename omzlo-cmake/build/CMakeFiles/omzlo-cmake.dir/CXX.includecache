@@ -3354,11 +3354,7 @@ instance/wdt.h
 pio/samd21j18a.h
 ../include/pio/samd21j18a.h
 
-/home/leland/projects/samd21-playground/omzlo-cmake/startup_samd21.c
+/home/leland/projects/samd21-playground/omzlo-cmake/main.cc
 samd21.h
-/home/leland/projects/samd21-playground/omzlo-cmake/samd21.h
-
-/home/leland/projects/samd21-playground/omzlo-cmake/system_samd21.c
-samd21.h
-/home/leland/projects/samd21-playground/omzlo-cmake/samd21.h
+-
 
