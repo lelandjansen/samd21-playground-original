@@ -4,6 +4,9 @@ set(CMAKE_SYSTEM_NAME Generic)
 set(CMAKE_SYSTEM_PROCESSOR arm-none-eabi)
 set(CMAKE_C_COMPILER arm-none-eabi-gcc)
 set(CMAKE_C_FLAGS "\
+  -mcpu=cortex-m0 \
+  -mthumb \
+  -g \
   -Wl,--start-group \
   -lgcc \
   -lc \
@@ -13,7 +16,7 @@ set(CMAKE_C_FLAGS "\
 set(link_file "${CMAKE_SOURCE_DIR}/samd21j18a_flash.ld")
 add_definitions(-D__SAMD21J18A__)
 
-project(omzlo-cmake C)
+project(omzlo-cmake)
 add_executable(omzlo-cmake
   main.c
   startup_samd21.c
@@ -29,6 +32,4 @@ set_target_properties(omzlo-cmake PROPERTIES
     -T${link_file} \
     -mthumb \
     -mcpu=cortex-m0 \
-    -Wl,--gc-sections"
-  LINK_DEPENDS ${link_file})
-
+    -Wl,--gc-sections")

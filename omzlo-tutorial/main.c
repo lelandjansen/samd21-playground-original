@@ -11,13 +11,10 @@ void delay(int n) {
 
 int main() {
   PORT->Group[1].DIRSET.reg = PORT_PB30;
-  // REG_PORT_DIR0 |= (1<<27);
   while (1) {
     PORT->Group[1].OUTCLR.reg = PORT_PB30;
-    // REG_PORT_OUT0 &= ~(1<<27);
-    delay(500);
+    delay(1000);
     PORT->Group[1].OUTSET.reg = PORT_PB30;
-    // REG_PORT_OUT0 |= (1<<27);
-    delay(500);
+    delay(1000);
   }
 }

@@ -7,8 +7,8 @@ OBJS=$(STARTUP) main.o
 # Tools
 CC=arm-none-eabi-gcc
 LD=arm-none-eabi-gcc
-AR=arm-none-eabi-ar
-AS=arm-none-eabi-as
+#AR=arm-none-eabi-ar
+#AS=arm-none-eabi-as
 
 ELF=$(notdir $(CURDIR)).elf
 
@@ -26,17 +26,17 @@ $(ELF):	$(OBJS)
 
 %.o:	%.c
 		$(CC) -c $(CFLAGS) $< -o $@
-		$(CC) -MM $(CFLAGS) $< > $*.d
+#		$(CC) -MM $(CFLAGS) $< > $*.d   # this is recommended
 
-%.o:	%.s
-		$(AS) $< -o $@
+#%.o:	%.s
+#		$(AS) $< -o $@
 
 clean:
-		rm -f $(OBJS) $(OBJS:.o=.d) $(ELF) startup_stm32f* $(CLEANOTHER)
+		rm -f $(OBJS) $(OBJS:.o=.d) $(ELF) $(CLEANOTHER) # startup_stm32f*
 
 debug:	$(ELF)
 		arm-none-eabi-gdb -iex "target extended-remote localhost:3333" $(ELF)
 
 # pull in dependencies
 
--include	$(OBJS:.o=.d)
+#-include	$(OBJS:.o=.d)

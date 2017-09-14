@@ -142,7 +142,6 @@ omzlo-cmake.elf: CMakeFiles/omzlo-cmake.dir/main.c.obj
 omzlo-cmake.elf: CMakeFiles/omzlo-cmake.dir/startup_samd21.c.obj
 omzlo-cmake.elf: CMakeFiles/omzlo-cmake.dir/system_samd21.c.obj
 omzlo-cmake.elf: CMakeFiles/omzlo-cmake.dir/build.make
-omzlo-cmake.elf: ../samd21j18a_flash.ld
 omzlo-cmake.elf: CMakeFiles/omzlo-cmake.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/leland/projects/samd21-playground/omzlo-cmake/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable omzlo-cmake.elf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/omzlo-cmake.dir/link.txt --verbose=$(VERBOSE)

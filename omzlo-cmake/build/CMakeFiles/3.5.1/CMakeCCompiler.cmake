@@ -62,6 +62,6 @@ endif()
 
 
 
-set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "c;m;rdimon;c;c;rdimon")
+set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "c;m;rdimon;c")
 set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "/usr/lib/gcc/arm-none-eabi/4.9.3;/usr/lib/arm-none-eabi/lib")
 set(CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")
