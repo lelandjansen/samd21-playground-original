@@ -160,10 +160,49 @@ CMAKE_STRIP:FILEPATH=/usr/bin/arm-none-eabi-strip
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Value Computed by CMake
+app_BINARY_DIR:STATIC=/home/leland/projects/samd21-playground/omzlo-cmake/build/app
+
+//Value Computed by CMake
+app_SOURCE_DIR:STATIC=/home/leland/projects/samd21-playground/omzlo-cmake/app
+
+//Value Computed by CMake
+cmsis_BINARY_DIR:STATIC=/home/leland/projects/samd21-playground/omzlo-cmake/build/cmsis
+
+//Value Computed by CMake
+cmsis_SOURCE_DIR:STATIC=/home/leland/projects/samd21-playground/omzlo-cmake/cmsis
+
+//Dependencies for target
+delay_LIB_DEPENDS:STATIC=
+
+//Value Computed by CMake
+led_BINARY_DIR:STATIC=/home/leland/projects/samd21-playground/omzlo-cmake/build/led
+
+//Dependencies for target
+led_LIB_DEPENDS:STATIC=
+
+//Value Computed by CMake
+led_SOURCE_DIR:STATIC=/home/leland/projects/samd21-playground/omzlo-cmake/led
+
+//Value Computed by CMake
 omzlo-cmake_BINARY_DIR:STATIC=/home/leland/projects/samd21-playground/omzlo-cmake/build
 
 //Value Computed by CMake
 omzlo-cmake_SOURCE_DIR:STATIC=/home/leland/projects/samd21-playground/omzlo-cmake
+
+//Value Computed by CMake
+samd21_BINARY_DIR:STATIC=/home/leland/projects/samd21-playground/omzlo-cmake/build/samd21
+
+//Value Computed by CMake
+samd21_SOURCE_DIR:STATIC=/home/leland/projects/samd21-playground/omzlo-cmake/samd21
+
+//Dependencies for target
+startup_LIB_DEPENDS:STATIC=
+
+//Value Computed by CMake
+util_BINARY_DIR:STATIC=/home/leland/projects/samd21-playground/omzlo-cmake/build/util
+
+//Value Computed by CMake
+util_SOURCE_DIR:STATIC=/home/leland/projects/samd21-playground/omzlo-cmake/util
 
 
 ########################
@@ -250,7 +289,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=6
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

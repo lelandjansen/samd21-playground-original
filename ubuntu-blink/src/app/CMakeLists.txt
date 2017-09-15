@@ -1,34 +1,24 @@
 project(app)
 add_executable(blink
-  main.cc)
-# https://stackoverflow.com/questions/32864689/cmake-how-to-add-dependency-on-linker-script-for-executable
-#set_target_properties(blink PROPERTIES 
-#  LINK_DEPENDS samd21j18a_flash.ld
-#  LINK_FLAGS "\
-#    -T${PROJECT_SOURCE_DIR}/build/samd21j18a_flash.ld \
-#    -mthumb \
-#    -mcpu=cortex-m0 \
-#    -Wl,--gc-sections") 
+  main.cc
+  ../samd21/startup_samd21.c
+  ../samd21/system_samd21.c)
+#target_include_directories(blink PRIVATE 
+#  ../samd21
+#  ../cmsis)
 target_link_libraries(blink PRIVATE
-  startup
   clock
   delay
   #dynamic-memory
   led
-  samd21
+  #samd21
   #syscalls
   )
 set_target_properties(blink PROPERTIES
   OUTPUT_NAME "blink.elf"
-  #COMPILE_FLAGS "
-  #  -mcpu=cortex-m0 \
-  #  -mthumb \
-  #  -g"
-  # COMPILE_FLAGS "-mcpu=cortex-m0 -mthumb -Wall -std=c++14"
-  LINK_FLAGS "
+  LINK_FLAGS "\
+    -T${link_file} \
     -mthumb \
     -mcpu=cortex-m0 \
-    -T${link_file} \
-    --specs=nosys.specs \
-    -Wl,--gc-sections"
-  LINK_DEPENDS ${link_file})
+    -Wl,--gc-sections")
+

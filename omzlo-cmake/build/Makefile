@@ -111,98 +111,43 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named omzlo-cmake
+# Target rules for targets named app
 
 # Build rule for target.
-omzlo-cmake: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 omzlo-cmake
-.PHONY : omzlo-cmake
+app: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 app
+.PHONY : app
 
 # fast build rule for target.
-omzlo-cmake/fast:
-	$(MAKE) -f CMakeFiles/omzlo-cmake.dir/build.make CMakeFiles/omzlo-cmake.dir/build
-.PHONY : omzlo-cmake/fast
+app/fast:
+	$(MAKE) -f app/CMakeFiles/app.dir/build.make app/CMakeFiles/app.dir/build
+.PHONY : app/fast
 
-main.obj: main.cc.obj
+#=============================================================================
+# Target rules for targets named led
 
-.PHONY : main.obj
+# Build rule for target.
+led: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 led
+.PHONY : led
 
-# target to build an object file
-main.cc.obj:
-	$(MAKE) -f CMakeFiles/omzlo-cmake.dir/build.make CMakeFiles/omzlo-cmake.dir/main.cc.obj
-.PHONY : main.cc.obj
+# fast build rule for target.
+led/fast:
+	$(MAKE) -f led/CMakeFiles/led.dir/build.make led/CMakeFiles/led.dir/build
+.PHONY : led/fast
 
-main.i: main.cc.i
+#=============================================================================
+# Target rules for targets named delay
 
-.PHONY : main.i
+# Build rule for target.
+delay: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 delay
+.PHONY : delay
 
-# target to preprocess a source file
-main.cc.i:
-	$(MAKE) -f CMakeFiles/omzlo-cmake.dir/build.make CMakeFiles/omzlo-cmake.dir/main.cc.i
-.PHONY : main.cc.i
-
-main.s: main.cc.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cc.s:
-	$(MAKE) -f CMakeFiles/omzlo-cmake.dir/build.make CMakeFiles/omzlo-cmake.dir/main.cc.s
-.PHONY : main.cc.s
-
-startup_samd21.obj: startup_samd21.c.obj
-
-.PHONY : startup_samd21.obj
-
-# target to build an object file
-startup_samd21.c.obj:
-	$(MAKE) -f CMakeFiles/omzlo-cmake.dir/build.make CMakeFiles/omzlo-cmake.dir/startup_samd21.c.obj
-.PHONY : startup_samd21.c.obj
-
-startup_samd21.i: startup_samd21.c.i
-
-.PHONY : startup_samd21.i
-
-# target to preprocess a source file
-startup_samd21.c.i:
-	$(MAKE) -f CMakeFiles/omzlo-cmake.dir/build.make CMakeFiles/omzlo-cmake.dir/startup_samd21.c.i
-.PHONY : startup_samd21.c.i
-
-startup_samd21.s: startup_samd21.c.s
-
-.PHONY : startup_samd21.s
-
-# target to generate assembly for a file
-startup_samd21.c.s:
-	$(MAKE) -f CMakeFiles/omzlo-cmake.dir/build.make CMakeFiles/omzlo-cmake.dir/startup_samd21.c.s
-.PHONY : startup_samd21.c.s
-
-system_samd21.obj: system_samd21.c.obj
-
-.PHONY : system_samd21.obj
-
-# target to build an object file
-system_samd21.c.obj:
-	$(MAKE) -f CMakeFiles/omzlo-cmake.dir/build.make CMakeFiles/omzlo-cmake.dir/system_samd21.c.obj
-.PHONY : system_samd21.c.obj
-
-system_samd21.i: system_samd21.c.i
-
-.PHONY : system_samd21.i
-
-# target to preprocess a source file
-system_samd21.c.i:
-	$(MAKE) -f CMakeFiles/omzlo-cmake.dir/build.make CMakeFiles/omzlo-cmake.dir/system_samd21.c.i
-.PHONY : system_samd21.c.i
-
-system_samd21.s: system_samd21.c.s
-
-.PHONY : system_samd21.s
-
-# target to generate assembly for a file
-system_samd21.c.s:
-	$(MAKE) -f CMakeFiles/omzlo-cmake.dir/build.make CMakeFiles/omzlo-cmake.dir/system_samd21.c.s
-.PHONY : system_samd21.c.s
+# fast build rule for target.
+delay/fast:
+	$(MAKE) -f util/CMakeFiles/delay.dir/build.make util/CMakeFiles/delay.dir/build
+.PHONY : delay/fast
 
 # Help Target
 help:
@@ -212,16 +157,9 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... omzlo-cmake"
-	@echo "... main.obj"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... startup_samd21.obj"
-	@echo "... startup_samd21.i"
-	@echo "... startup_samd21.s"
-	@echo "... system_samd21.obj"
-	@echo "... system_samd21.i"
-	@echo "... system_samd21.s"
+	@echo "... app"
+	@echo "... led"
+	@echo "... delay"
 .PHONY : help
 
 

@@ -27,24 +27,13 @@ set(CMAKE_CXX_FLAGS "\
   -Wextra \
   -Wpedantic \
   -fno-exceptions")
-set(link_file "${CMAKE_SOURCE_DIR}/samd21j18a_flash.ld")
+set(link_file "${CMAKE_SOURCE_DIR}/samd21/samd21j18a_flash.ld")
 add_definitions(-D__SAMD21J18A__)
 
 project(omzlo-cmake)
-add_executable(omzlo-cmake
-  main.cc
-  startup_samd21.c
-  system_samd21.c
-  )
-target_include_directories(omzlo-cmake PRIVATE
-  include
-  cmsis
-  .)
-set_target_properties(omzlo-cmake PROPERTIES
-  OUTPUT_NAME "omzlo-cmake.elf"
-  LINK_FLAGS "\
-    -T${link_file} \
-    -mthumb \
-    -mcpu=cortex-m0 \
-    -Wl,--gc-sections")
+add_subdirectory(app)
+add_subdirectory(cmsis)
+add_subdirectory(samd21)
+add_subdirectory(led)
+add_subdirectory(util)
 

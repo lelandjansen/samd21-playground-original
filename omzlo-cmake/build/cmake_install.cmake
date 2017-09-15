@@ -27,6 +27,16 @@ if(NOT CMAKE_INSTALL_COMPONENT)
   endif()
 endif()
 
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for each subdirectory.
+  include("/home/leland/projects/samd21-playground/omzlo-cmake/build/app/cmake_install.cmake")
+  include("/home/leland/projects/samd21-playground/omzlo-cmake/build/cmsis/cmake_install.cmake")
+  include("/home/leland/projects/samd21-playground/omzlo-cmake/build/samd21/cmake_install.cmake")
+  include("/home/leland/projects/samd21-playground/omzlo-cmake/build/led/cmake_install.cmake")
+  include("/home/leland/projects/samd21-playground/omzlo-cmake/build/util/cmake_install.cmake")
+
+endif()
+
 if(CMAKE_INSTALL_COMPONENT)
   set(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INSTALL_COMPONENT}.txt")
 else()
