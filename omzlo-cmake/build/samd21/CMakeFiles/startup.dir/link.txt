@@ -1,2 +1,0 @@
-/usr/bin/arm-none-eabi-ar qc libstartup.a  CMakeFiles/startup.dir/startup_samd21.c.obj CMakeFiles/startup.dir/system_samd21.c.obj
-/usr/bin/arm-none-eabi-ranlib libstartup.a

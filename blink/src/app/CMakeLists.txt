@@ -2,8 +2,11 @@ project(app)
 
 add_executable(app
   ${CMAKE_SOURCE_DIR}/samd21/startup_samd21.c
+  ${CMAKE_SOURCE_DIR}/util/dynamic-memory.cc
+  ${CMAKE_SOURCE_DIR}/util/syscalls.c
   main.cc)
 target_link_libraries(app
+  clock
   delay
   led)
 set_target_properties(app PROPERTIES

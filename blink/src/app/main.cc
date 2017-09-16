@@ -1,14 +1,15 @@
+#include "util/clock.h"
 #include "util/delay.h"
-#include "led/led.h"
+#include "perhipial/led/led0.h"
 
 auto main() -> int {
+  util::ClockInit();
+  util::DelayInit();
   const auto delay = 1000;
-  led::SetOutput();
+  perhipial::Led0 led;
   while (true) {
-    led::On();
-    Delay(delay);
-    led::Off();
-    Delay(delay);
+    led.Toggle();
+    util::DelayMilliseconds(delay);
   }
 }
 

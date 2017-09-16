@@ -1,13 +1,8 @@
-cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
-
-project(omzlo-cmake)
+cmake_minimum_required(VERSION 3.9 FATAL_ERROR)
 
 set(CMAKE_SYSTEM_NAME Generic)
 set(CMAKE_SYSTEM_PROCESSOR arm-none-eabi)
-
-#include(CMakeForceCompiler)
-#cmake_force_c_compiler(arm-none-eabi-gcc GNU)
-#cmake_force_cxx_compiler(arm-none-eabi-g++ GNU)
+set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
 set(CMAKE_C_COMPILER arm-none-eabi-gcc)
 set(CMAKE_CXX_COMPILER arm-none-eabi-g++)
 set(CMAKE_CXX_STANDARD 14)
@@ -22,7 +17,7 @@ set(CMAKE_C_FLAGS "\
   -lrdimon \
   -Wl,--end-group")
 set(CMAKE_CXX_FLAGS "\
-  --specs=nosys.specs \
+  -specs=nosys.specs \
   -mcpu=cortex-m0 \
   -mthumb \
   -g \
@@ -33,12 +28,14 @@ set(CMAKE_CXX_FLAGS "\
   -Wextra \
   -Wpedantic \
   -fno-exceptions")
+  #  -specs=nano.specs \
 set(link_file "${CMAKE_SOURCE_DIR}/samd21/samd21j18a_flash.ld")
 add_definitions(-D__SAMD21J18A__)
 
+project(blink)
 add_subdirectory(app)
 add_subdirectory(cmsis)
+add_subdirectory(perhipial)
 add_subdirectory(samd21)
-add_subdirectory(led)
 add_subdirectory(util)
 

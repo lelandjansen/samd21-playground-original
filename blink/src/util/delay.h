@@ -1,7 +1,15 @@
-#ifndef DELAY_H_ 
-#define DELAY_H_
+#ifndef UITL_DELAY_H_
+#define UTIL_DELAY_H_
 
-auto Delay(int n) -> void;
+#include <cstdint>
 
-#endif //DELAY_H_
+namespace util {
 
+auto DelayInit() -> void;
+auto DelayMilliseconds(uint32_t milliseconds) -> void;
+auto DelayMicroseconds(uint32_t microseconds) -> void;
+auto DelayClockCycles(uint32_t cycles) -> void;
+
+}  // namespace util
+
+#endif // UTIL_DELAY_H_
