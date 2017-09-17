@@ -1,2 +1,0 @@
-/usr/bin/gcc-arm-none-eabi/bin/arm-none-eabi-ar qc libclock.a  CMakeFiles/clock.dir/clock.cc.obj
-/usr/bin/gcc-arm-none-eabi/bin/arm-none-eabi-ranlib libclock.a

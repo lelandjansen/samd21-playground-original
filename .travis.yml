@@ -1,0 +1,33 @@
+sudo: true
+
+before_install:
+  - PROJECT_DIR=$(pwd)
+
+install:
+  # CMake 3.9
+  - cd $PROJECT_DIR
+  - sudo apt purge cmake
+  - wget https://cmake.org/files/v3.9/cmake-3.9.2.tar.gz
+  - tar --extract --gunzip --file cmake-3.9.2.tar.gz
+  - cd cmake-3.9.2/
+  - ./bootstrap
+  - make -j2
+  - sudo make install -j2
+
+  # GNU Arm Embedded Toolchain
+  - cd $PROJECT_DIR
+  - wget https://developer.arm.com/-/media/Files/downloads/gnu-rm/6-2017q2/gcc-arm-none-eabi-6-2017-q2-update-linux.tar.bz2
+  - tar --extract --bzip2 --file gcc-arm-none-eabi-6-2017-q2-update-linux.tar.bz2
+
+script:
+  # Build project
+  - cd $PROJECT_DIR
+  - mkdir -p blink/build
+  - cd blink/build
+  - ls -1 $PROJECT_DIR
+  - ls -1 $PROJECT_DIR/gcc-arm-none-eabi-6-2017-q2-update
+  - ls -1 $PROJECT_DIR/gcc-arm-none-eabi-6-2017-q2-update/bin
+  - cmake ../src -DCMAKE_C_COMPILER=$PROJECT_DIR/gcc-arm-none-eabi-6-2017-q2-update-linux/bin/arm-none-eabi-gcc -DCMAKE_CXX_COMPILER=$PROJECT_DIR/gcc-arm-none-eabi-6-2017-q2-update-linux/bin/arm-none-eabi-g++ 
+  - cmake ../src -DCMAKE_C_COMPILER=$PROJECT_DIR/gcc-arm-none-eabi-6-2017-q2-update-linux/arm-none-eabi/bin/arm-none-eabi-gcc -DCMAKE_CXX_COMPILER=$PROJECT_DIR/gcc-arm-none-eabi-6-2017-q2-update-linux/arm-none-eabi/bin/arm-none-eabi-g++ 
+  - make -j2
+
