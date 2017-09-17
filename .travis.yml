@@ -1,0 +1,19 @@
+sudo: true
+language: cpp
+
+script:
+  # Install CMake 3.9
+  - sudo apt purge cmake
+  - wget https://cmake.org/files/v3.9/cmake-3.9.2.tar.gz
+  - tar --extract --gunzip --file cmake-3.9.2.tar.gz
+  - pwd
+  - ls -a1
+  - cd cmake-3.9.2/
+  - ./bootstrap
+  - make -j2
+  - sudo make install
+
+  - mkdir -p blink/build
+  - cd blink/build
+  - cmake ../src
+  - cmake --build ../src -- -j2

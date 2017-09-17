@@ -1,6 +1,6 @@
+#include "perhipial/led/led0.h"
 #include "util/clock.h"
 #include "util/delay.h"
-#include "perhipial/led/led0.h"
 
 auto main() -> int {
   util::ClockInit();
