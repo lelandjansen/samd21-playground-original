@@ -1,0 +1,16 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: lelandjansen/samd21-toolchain:0.0.1
+    steps:
+      - checkout
+      - run:
+        name: Build project
+        command: |
+          cd blink
+          mkdir build
+          cd build
+          cmake ../src && cmake ../src
+          make -j2
+
