@@ -1,35 +1,39 @@
-#include "delay.h"
+#include "util/delay.h"
 
 #include <cstdint>
 
-#include "samd21/samd21j18a.h"
-#include "wait.h"
-#include "clock.h"
+#include "samd21/samd21.h"
+#include "util/wait.h"
+#include "util/clock.h"
 
 namespace util {
 
 namespace {
-const uint32_t kClockCyclesPerMillisecond = kMainClockFrequency / 1000ul;
-const uint32_t kClockCyclesPerMicrosecond = kMainClockFrequency / 1000000ul;
-}
+
+const uint32_t kClockCyclesPerMillisecond = 
+    kMainClockFrequencyHz / static_cast<uint32_t>(1000);
+const uint32_t kClockCyclesPerMicrosecond = 
+    kMainClockFrequencyHz / static_cast<uint32_t>(1000000);
+
+}  // namespace
 
 auto DelayInit() -> void {
 	SysTick->CTRL = SysTick_CTRL_CLKSOURCE_Msk | SysTick_CTRL_ENABLE_Msk;
 }
 
-auto DelayMilliseconds(uint32_t milliseconds) -> void {
-	while (milliseconds--) {
+auto DelayMilliseconds(const uint32_t milliseconds) -> void {
+  for (uint32_t millisecond = 0; millisecond < milliseconds; ++millisecond) {
 		DelayClockCycles(kClockCyclesPerMillisecond);
 	}
 }
 
-auto DelayMicroseconds(uint32_t microseconds) -> void {
-	while (microseconds--) {
+auto DelayMicroseconds(const uint32_t microseconds) -> void {
+  for (uint32_t microsecond = 0; microsecond < microseconds; ++microsecond) {
 		DelayClockCycles(kClockCyclesPerMicrosecond);
 	}
 }
 
-auto DelayClockCycles(uint32_t clock_cycles) -> void {
+auto DelayClockCycles(const uint32_t clock_cycles) -> void {
 	if (clock_cycles == 0) return;
 	SysTick->LOAD = clock_cycles;
 	SysTick->VAL = 0;
@@ -37,3 +41,4 @@ auto DelayClockCycles(uint32_t clock_cycles) -> void {
 }
 
 }  // namespace util
+

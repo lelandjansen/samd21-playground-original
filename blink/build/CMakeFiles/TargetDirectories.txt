@@ -13,5 +13,5 @@
 /home/leland/projects/samd21-playground/blink/build/util/CMakeFiles/rebuild_cache.dir
 /home/leland/projects/samd21-playground/blink/build/util/CMakeFiles/edit_cache.dir
 /home/leland/projects/samd21-playground/blink/build/util/CMakeFiles/clock.dir
-/home/leland/projects/samd21-playground/blink/build/util/CMakeFiles/delay.dir
 /home/leland/projects/samd21-playground/blink/build/util/CMakeFiles/reset.dir
+/home/leland/projects/samd21-playground/blink/build/util/CMakeFiles/delay.dir

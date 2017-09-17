@@ -61,9 +61,10 @@ util/CMakeFiles/delay.dir/delay.cc.obj: /home/leland/projects/samd21-playground/
 util/CMakeFiles/delay.dir/delay.cc.obj: /home/leland/projects/samd21-playground/blink/src/samd21/instance/tcc2.h
 util/CMakeFiles/delay.dir/delay.cc.obj: /home/leland/projects/samd21-playground/blink/src/samd21/instance/usb.h
 util/CMakeFiles/delay.dir/delay.cc.obj: /home/leland/projects/samd21-playground/blink/src/samd21/instance/wdt.h
+util/CMakeFiles/delay.dir/delay.cc.obj: /home/leland/projects/samd21-playground/blink/src/samd21/interrupt-handlers.h
 util/CMakeFiles/delay.dir/delay.cc.obj: /home/leland/projects/samd21-playground/blink/src/samd21/pio/samd21j18a.h
+util/CMakeFiles/delay.dir/delay.cc.obj: /home/leland/projects/samd21-playground/blink/src/samd21/samd21.h
 util/CMakeFiles/delay.dir/delay.cc.obj: /home/leland/projects/samd21-playground/blink/src/samd21/samd21j18a.h
-util/CMakeFiles/delay.dir/delay.cc.obj: /home/leland/projects/samd21-playground/blink/src/samd21/system_samd21.h
 util/CMakeFiles/delay.dir/delay.cc.obj: /home/leland/projects/samd21-playground/blink/src/util/clock.h
 util/CMakeFiles/delay.dir/delay.cc.obj: /home/leland/projects/samd21-playground/blink/src/util/delay.cc
 util/CMakeFiles/delay.dir/delay.cc.obj: /home/leland/projects/samd21-playground/blink/src/util/delay.h

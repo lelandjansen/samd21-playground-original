@@ -126,21 +126,6 @@ clock/fast:
 .PHONY : clock/fast
 
 # Convenience name for target.
-util/CMakeFiles/delay.dir/rule:
-	cd /home/leland/projects/samd21-playground/blink/build && $(MAKE) -f CMakeFiles/Makefile2 util/CMakeFiles/delay.dir/rule
-.PHONY : util/CMakeFiles/delay.dir/rule
-
-# Convenience name for target.
-delay: util/CMakeFiles/delay.dir/rule
-
-.PHONY : delay
-
-# fast build rule for target.
-delay/fast:
-	cd /home/leland/projects/samd21-playground/blink/build && $(MAKE) -f util/CMakeFiles/delay.dir/build.make util/CMakeFiles/delay.dir/build
-.PHONY : delay/fast
-
-# Convenience name for target.
 util/CMakeFiles/reset.dir/rule:
 	cd /home/leland/projects/samd21-playground/blink/build && $(MAKE) -f CMakeFiles/Makefile2 util/CMakeFiles/reset.dir/rule
 .PHONY : util/CMakeFiles/reset.dir/rule
@@ -154,6 +139,21 @@ reset: util/CMakeFiles/reset.dir/rule
 reset/fast:
 	cd /home/leland/projects/samd21-playground/blink/build && $(MAKE) -f util/CMakeFiles/reset.dir/build.make util/CMakeFiles/reset.dir/build
 .PHONY : reset/fast
+
+# Convenience name for target.
+util/CMakeFiles/delay.dir/rule:
+	cd /home/leland/projects/samd21-playground/blink/build && $(MAKE) -f CMakeFiles/Makefile2 util/CMakeFiles/delay.dir/rule
+.PHONY : util/CMakeFiles/delay.dir/rule
+
+# Convenience name for target.
+delay: util/CMakeFiles/delay.dir/rule
+
+.PHONY : delay
+
+# fast build rule for target.
+delay/fast:
+	cd /home/leland/projects/samd21-playground/blink/build && $(MAKE) -f util/CMakeFiles/delay.dir/build.make util/CMakeFiles/delay.dir/build
+.PHONY : delay/fast
 
 clock.obj: clock.cc.obj
 
@@ -245,8 +245,8 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... clock"
-	@echo "... delay"
 	@echo "... reset"
+	@echo "... delay"
 	@echo "... clock.obj"
 	@echo "... clock.i"
 	@echo "... clock.s"

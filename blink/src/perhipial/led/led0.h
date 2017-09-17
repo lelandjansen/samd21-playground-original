@@ -19,4 +19,5 @@ class Led0 : GpioLedInterface {
 
 }  // namespace perhipial
 
-#endif // PERHIPIAL_LED_LED0_H_
+#endif  // PERHIPIAL_LED_LED0_H_
+

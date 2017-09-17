@@ -5,11 +5,10 @@
 auto main() -> int {
   util::ClockInit();
   util::DelayInit();
-  const auto delay = 1000;
   perhipial::Led0 led;
   while (true) {
     led.Toggle();
-    util::DelayMilliseconds(delay);
+    util::DelayMilliseconds(1000);
   }
 }
 

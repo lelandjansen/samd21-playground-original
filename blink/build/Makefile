@@ -150,19 +150,6 @@ clock/fast:
 .PHONY : clock/fast
 
 #=============================================================================
-# Target rules for targets named delay
-
-# Build rule for target.
-delay: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 delay
-.PHONY : delay
-
-# fast build rule for target.
-delay/fast:
-	$(MAKE) -f util/CMakeFiles/delay.dir/build.make util/CMakeFiles/delay.dir/build
-.PHONY : delay/fast
-
-#=============================================================================
 # Target rules for targets named reset
 
 # Build rule for target.
@@ -175,6 +162,19 @@ reset/fast:
 	$(MAKE) -f util/CMakeFiles/reset.dir/build.make util/CMakeFiles/reset.dir/build
 .PHONY : reset/fast
 
+#=============================================================================
+# Target rules for targets named delay
+
+# Build rule for target.
+delay: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 delay
+.PHONY : delay
+
+# fast build rule for target.
+delay/fast:
+	$(MAKE) -f util/CMakeFiles/delay.dir/build.make util/CMakeFiles/delay.dir/build
+.PHONY : delay/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -186,8 +186,8 @@ help:
 	@echo "... app"
 	@echo "... led"
 	@echo "... clock"
-	@echo "... delay"
 	@echo "... reset"
+	@echo "... delay"
 .PHONY : help
 
 

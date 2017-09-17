@@ -144,15 +144,21 @@ cmsis_csm.h
 
 /home/leland/projects/samd21-playground/blink/src/samd21/instance/wdt.h
 
+/home/leland/projects/samd21-playground/blink/src/samd21/interrupt-handlers.h
+
 /home/leland/projects/samd21-playground/blink/src/samd21/pio/samd21j18a.h
 
+/home/leland/projects/samd21-playground/blink/src/samd21/samd21.h
+samd21j18a.h
 /home/leland/projects/samd21-playground/blink/src/samd21/samd21j18a.h
+
+/home/leland/projects/samd21-playground/blink/src/samd21/samd21j18a.h
+interrupt-handlers.h
+/home/leland/projects/samd21-playground/blink/src/samd21/interrupt-handlers.h
 stdint.h
 -
 cmsis/core_cm0plus.h
 /home/leland/projects/samd21-playground/blink/src/samd21/cmsis/core_cm0plus.h
-system_samd21.h
-/home/leland/projects/samd21-playground/blink/src/samd21/system_samd21.h
 component/ac.h
 /home/leland/projects/samd21-playground/blink/src/samd21/component/ac.h
 component/adc.h
@@ -270,25 +276,21 @@ instance/wdt.h
 pio/samd21j18a.h
 /home/leland/projects/samd21-playground/blink/src/samd21/pio/samd21j18a.h
 
-/home/leland/projects/samd21-playground/blink/src/samd21/system_samd21.h
-stdint.h
--
-
 /home/leland/projects/samd21-playground/blink/src/util/clock.h
 cstdint
 -
 
 /home/leland/projects/samd21-playground/blink/src/util/delay.cc
-delay.h
-/home/leland/projects/samd21-playground/blink/src/util/delay.h
+util/delay.h
+/home/leland/projects/samd21-playground/blink/src/util/util/delay.h
 cstdint
 -
-samd21/samd21j18a.h
-/home/leland/projects/samd21-playground/blink/src/util/samd21/samd21j18a.h
-wait.h
-/home/leland/projects/samd21-playground/blink/src/util/wait.h
-clock.h
-/home/leland/projects/samd21-playground/blink/src/util/clock.h
+samd21/samd21.h
+/home/leland/projects/samd21-playground/blink/src/util/samd21/samd21.h
+util/wait.h
+/home/leland/projects/samd21-playground/blink/src/util/util/wait.h
+util/clock.h
+/home/leland/projects/samd21-playground/blink/src/util/util/clock.h
 
 /home/leland/projects/samd21-playground/blink/src/util/delay.h
 cstdint

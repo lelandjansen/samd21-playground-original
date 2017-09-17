@@ -23,6 +23,12 @@ target_link_libraries(reset PRIVATE
 target_include_directories(reset
   INTERFACE ${CMAKE_SOURCE_DIR})
 
+add_library(unused INTERFACE) 
+target_sources(unused INTERFACE
+  ${CMAKE_CURRENT_SOURCE_DIR}/unused.h)
+target_include_directories(unused
+  INTERFACE ${CMAKE_SOURCE_DIR})
+
 add_library(wait INTERFACE) 
 target_sources(wait INTERFACE
   ${CMAKE_CURRENT_SOURCE_DIR}/wait.h)

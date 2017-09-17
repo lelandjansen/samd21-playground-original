@@ -5,7 +5,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/leland/projects/samd21-playground/blink/src/samd21/startup_samd21.c" "/home/leland/projects/samd21-playground/blink/build/app/CMakeFiles/app.dir/__/samd21/startup_samd21.c.obj"
+  "/home/leland/projects/samd21-playground/blink/src/samd21/interrupt-handlers.c" "/home/leland/projects/samd21-playground/blink/build/app/CMakeFiles/app.dir/__/samd21/interrupt-handlers.c.obj"
+  "/home/leland/projects/samd21-playground/blink/src/samd21/startup.c" "/home/leland/projects/samd21-playground/blink/build/app/CMakeFiles/app.dir/__/samd21/startup.c.obj"
   "/home/leland/projects/samd21-playground/blink/src/util/syscalls.c" "/home/leland/projects/samd21-playground/blink/build/app/CMakeFiles/app.dir/__/util/syscalls.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")

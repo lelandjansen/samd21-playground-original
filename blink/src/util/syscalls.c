@@ -28,9 +28,12 @@
 // ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
 
-#include "syscalls.h"
+#include "util/syscalls.h"
 
+#include <stddef.h>
 #include <sys/stat.h>
+
+#include "util/unused.h"
 
 extern void* _sbrk(int incr) {
   static unsigned char *heap = NULL;
@@ -44,46 +47,41 @@ extern void* _sbrk(int incr) {
 }
 
 extern int link(char* c_old, char* c_new) {
+  UNUSED(c_old);
+  UNUSED(c_new);
   return -1;
 }
 
 extern int _close(int file) {
+  UNUSED(file);
   return -1;
 }
 
-// extern int _fstat(int file, struct stat *st) {
-//   st->st_mode = S_IFCHR;
-//   return 0;
-// }
-
 extern int _isatty(int file) {
+  UNUSED(file);
   return 1;
 }
 
 extern int _lseek(int file, int ptr, int dir) {
+  UNUSED(file);
+  UNUSED(ptr);
+  UNUSED(dir);
   return 0;
 }
 
 extern void _exit(int status) {
-  // asm("BKPT #0"); // breakpoint
+  UNUSED(status);
+  asm("BKPT #0"); // breakpoint
   for (;;);
 }
 
 extern void _kill(int pid, int sig) {
+  UNUSED(pid);
+  UNUSED(sig);
   return;
 }
 
 extern int _getpid(void) {
   return -1;
 }
-
-// // TODO(lelandjansen): Implement _read
-// extern int _read(int file, char *ptr, int len) {
-//   return -1;
-// }
-
-// // TODO(lelandjansen): Implement _write
-// extern int _write(int file, char *ptr, int len) {
-//   return -1;
-// }
 

@@ -57,33 +57,57 @@ include app/CMakeFiles/app.dir/progress.make
 # Include the compile flags for this target's objects.
 include app/CMakeFiles/app.dir/flags.make
 
-app/CMakeFiles/app.dir/__/samd21/startup_samd21.c.obj: app/CMakeFiles/app.dir/flags.make
-app/CMakeFiles/app.dir/__/samd21/startup_samd21.c.obj: /home/leland/projects/samd21-playground/blink/src/samd21/startup_samd21.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leland/projects/samd21-playground/blink/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object app/CMakeFiles/app.dir/__/samd21/startup_samd21.c.obj"
-	cd /home/leland/projects/samd21-playground/blink/build/app && /usr/bin/gcc-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/app.dir/__/samd21/startup_samd21.c.obj   -c /home/leland/projects/samd21-playground/blink/src/samd21/startup_samd21.c
+app/CMakeFiles/app.dir/__/samd21/interrupt-handlers.c.obj: app/CMakeFiles/app.dir/flags.make
+app/CMakeFiles/app.dir/__/samd21/interrupt-handlers.c.obj: /home/leland/projects/samd21-playground/blink/src/samd21/interrupt-handlers.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leland/projects/samd21-playground/blink/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object app/CMakeFiles/app.dir/__/samd21/interrupt-handlers.c.obj"
+	cd /home/leland/projects/samd21-playground/blink/build/app && /usr/bin/gcc-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/app.dir/__/samd21/interrupt-handlers.c.obj   -c /home/leland/projects/samd21-playground/blink/src/samd21/interrupt-handlers.c
 
-app/CMakeFiles/app.dir/__/samd21/startup_samd21.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/app.dir/__/samd21/startup_samd21.c.i"
-	cd /home/leland/projects/samd21-playground/blink/build/app && /usr/bin/gcc-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/leland/projects/samd21-playground/blink/src/samd21/startup_samd21.c > CMakeFiles/app.dir/__/samd21/startup_samd21.c.i
+app/CMakeFiles/app.dir/__/samd21/interrupt-handlers.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/app.dir/__/samd21/interrupt-handlers.c.i"
+	cd /home/leland/projects/samd21-playground/blink/build/app && /usr/bin/gcc-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/leland/projects/samd21-playground/blink/src/samd21/interrupt-handlers.c > CMakeFiles/app.dir/__/samd21/interrupt-handlers.c.i
 
-app/CMakeFiles/app.dir/__/samd21/startup_samd21.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/app.dir/__/samd21/startup_samd21.c.s"
-	cd /home/leland/projects/samd21-playground/blink/build/app && /usr/bin/gcc-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/leland/projects/samd21-playground/blink/src/samd21/startup_samd21.c -o CMakeFiles/app.dir/__/samd21/startup_samd21.c.s
+app/CMakeFiles/app.dir/__/samd21/interrupt-handlers.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/app.dir/__/samd21/interrupt-handlers.c.s"
+	cd /home/leland/projects/samd21-playground/blink/build/app && /usr/bin/gcc-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/leland/projects/samd21-playground/blink/src/samd21/interrupt-handlers.c -o CMakeFiles/app.dir/__/samd21/interrupt-handlers.c.s
 
-app/CMakeFiles/app.dir/__/samd21/startup_samd21.c.obj.requires:
+app/CMakeFiles/app.dir/__/samd21/interrupt-handlers.c.obj.requires:
 
-.PHONY : app/CMakeFiles/app.dir/__/samd21/startup_samd21.c.obj.requires
+.PHONY : app/CMakeFiles/app.dir/__/samd21/interrupt-handlers.c.obj.requires
 
-app/CMakeFiles/app.dir/__/samd21/startup_samd21.c.obj.provides: app/CMakeFiles/app.dir/__/samd21/startup_samd21.c.obj.requires
-	$(MAKE) -f app/CMakeFiles/app.dir/build.make app/CMakeFiles/app.dir/__/samd21/startup_samd21.c.obj.provides.build
-.PHONY : app/CMakeFiles/app.dir/__/samd21/startup_samd21.c.obj.provides
+app/CMakeFiles/app.dir/__/samd21/interrupt-handlers.c.obj.provides: app/CMakeFiles/app.dir/__/samd21/interrupt-handlers.c.obj.requires
+	$(MAKE) -f app/CMakeFiles/app.dir/build.make app/CMakeFiles/app.dir/__/samd21/interrupt-handlers.c.obj.provides.build
+.PHONY : app/CMakeFiles/app.dir/__/samd21/interrupt-handlers.c.obj.provides
 
-app/CMakeFiles/app.dir/__/samd21/startup_samd21.c.obj.provides.build: app/CMakeFiles/app.dir/__/samd21/startup_samd21.c.obj
+app/CMakeFiles/app.dir/__/samd21/interrupt-handlers.c.obj.provides.build: app/CMakeFiles/app.dir/__/samd21/interrupt-handlers.c.obj
+
+
+app/CMakeFiles/app.dir/__/samd21/startup.c.obj: app/CMakeFiles/app.dir/flags.make
+app/CMakeFiles/app.dir/__/samd21/startup.c.obj: /home/leland/projects/samd21-playground/blink/src/samd21/startup.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leland/projects/samd21-playground/blink/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object app/CMakeFiles/app.dir/__/samd21/startup.c.obj"
+	cd /home/leland/projects/samd21-playground/blink/build/app && /usr/bin/gcc-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/app.dir/__/samd21/startup.c.obj   -c /home/leland/projects/samd21-playground/blink/src/samd21/startup.c
+
+app/CMakeFiles/app.dir/__/samd21/startup.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/app.dir/__/samd21/startup.c.i"
+	cd /home/leland/projects/samd21-playground/blink/build/app && /usr/bin/gcc-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/leland/projects/samd21-playground/blink/src/samd21/startup.c > CMakeFiles/app.dir/__/samd21/startup.c.i
+
+app/CMakeFiles/app.dir/__/samd21/startup.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/app.dir/__/samd21/startup.c.s"
+	cd /home/leland/projects/samd21-playground/blink/build/app && /usr/bin/gcc-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/leland/projects/samd21-playground/blink/src/samd21/startup.c -o CMakeFiles/app.dir/__/samd21/startup.c.s
+
+app/CMakeFiles/app.dir/__/samd21/startup.c.obj.requires:
+
+.PHONY : app/CMakeFiles/app.dir/__/samd21/startup.c.obj.requires
+
+app/CMakeFiles/app.dir/__/samd21/startup.c.obj.provides: app/CMakeFiles/app.dir/__/samd21/startup.c.obj.requires
+	$(MAKE) -f app/CMakeFiles/app.dir/build.make app/CMakeFiles/app.dir/__/samd21/startup.c.obj.provides.build
+.PHONY : app/CMakeFiles/app.dir/__/samd21/startup.c.obj.provides
+
+app/CMakeFiles/app.dir/__/samd21/startup.c.obj.provides.build: app/CMakeFiles/app.dir/__/samd21/startup.c.obj
 
 
 app/CMakeFiles/app.dir/__/util/dynamic-memory.cc.obj: app/CMakeFiles/app.dir/flags.make
 app/CMakeFiles/app.dir/__/util/dynamic-memory.cc.obj: /home/leland/projects/samd21-playground/blink/src/util/dynamic-memory.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leland/projects/samd21-playground/blink/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object app/CMakeFiles/app.dir/__/util/dynamic-memory.cc.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leland/projects/samd21-playground/blink/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object app/CMakeFiles/app.dir/__/util/dynamic-memory.cc.obj"
 	cd /home/leland/projects/samd21-playground/blink/build/app && /usr/bin/gcc-arm-none-eabi/bin/arm-none-eabi-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/app.dir/__/util/dynamic-memory.cc.obj -c /home/leland/projects/samd21-playground/blink/src/util/dynamic-memory.cc
 
 app/CMakeFiles/app.dir/__/util/dynamic-memory.cc.i: cmake_force
@@ -107,7 +131,7 @@ app/CMakeFiles/app.dir/__/util/dynamic-memory.cc.obj.provides.build: app/CMakeFi
 
 app/CMakeFiles/app.dir/__/util/syscalls.c.obj: app/CMakeFiles/app.dir/flags.make
 app/CMakeFiles/app.dir/__/util/syscalls.c.obj: /home/leland/projects/samd21-playground/blink/src/util/syscalls.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leland/projects/samd21-playground/blink/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object app/CMakeFiles/app.dir/__/util/syscalls.c.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leland/projects/samd21-playground/blink/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object app/CMakeFiles/app.dir/__/util/syscalls.c.obj"
 	cd /home/leland/projects/samd21-playground/blink/build/app && /usr/bin/gcc-arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/app.dir/__/util/syscalls.c.obj   -c /home/leland/projects/samd21-playground/blink/src/util/syscalls.c
 
 app/CMakeFiles/app.dir/__/util/syscalls.c.i: cmake_force
@@ -131,7 +155,7 @@ app/CMakeFiles/app.dir/__/util/syscalls.c.obj.provides.build: app/CMakeFiles/app
 
 app/CMakeFiles/app.dir/main.cc.obj: app/CMakeFiles/app.dir/flags.make
 app/CMakeFiles/app.dir/main.cc.obj: /home/leland/projects/samd21-playground/blink/src/app/main.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leland/projects/samd21-playground/blink/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object app/CMakeFiles/app.dir/main.cc.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/leland/projects/samd21-playground/blink/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object app/CMakeFiles/app.dir/main.cc.obj"
 	cd /home/leland/projects/samd21-playground/blink/build/app && /usr/bin/gcc-arm-none-eabi/bin/arm-none-eabi-g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/app.dir/main.cc.obj -c /home/leland/projects/samd21-playground/blink/src/app/main.cc
 
 app/CMakeFiles/app.dir/main.cc.i: cmake_force
@@ -155,7 +179,8 @@ app/CMakeFiles/app.dir/main.cc.obj.provides.build: app/CMakeFiles/app.dir/main.c
 
 # Object files for target app
 app_OBJECTS = \
-"CMakeFiles/app.dir/__/samd21/startup_samd21.c.obj" \
+"CMakeFiles/app.dir/__/samd21/interrupt-handlers.c.obj" \
+"CMakeFiles/app.dir/__/samd21/startup.c.obj" \
 "CMakeFiles/app.dir/__/util/dynamic-memory.cc.obj" \
 "CMakeFiles/app.dir/__/util/syscalls.c.obj" \
 "CMakeFiles/app.dir/main.cc.obj"
@@ -163,7 +188,8 @@ app_OBJECTS = \
 # External object files for target app
 app_EXTERNAL_OBJECTS =
 
-app/app.elf: app/CMakeFiles/app.dir/__/samd21/startup_samd21.c.obj
+app/app.elf: app/CMakeFiles/app.dir/__/samd21/interrupt-handlers.c.obj
+app/app.elf: app/CMakeFiles/app.dir/__/samd21/startup.c.obj
 app/app.elf: app/CMakeFiles/app.dir/__/util/dynamic-memory.cc.obj
 app/app.elf: app/CMakeFiles/app.dir/__/util/syscalls.c.obj
 app/app.elf: app/CMakeFiles/app.dir/main.cc.obj
@@ -173,7 +199,7 @@ app/app.elf: util/libdelay.a
 app/app.elf: perhipial/libled.a
 app/app.elf: util/libreset.a
 app/app.elf: app/CMakeFiles/app.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/leland/projects/samd21-playground/blink/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable app.elf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/leland/projects/samd21-playground/blink/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable app.elf"
 	cd /home/leland/projects/samd21-playground/blink/build/app && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/app.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -181,7 +207,8 @@ app/CMakeFiles/app.dir/build: app/app.elf
 
 .PHONY : app/CMakeFiles/app.dir/build
 
-app/CMakeFiles/app.dir/requires: app/CMakeFiles/app.dir/__/samd21/startup_samd21.c.obj.requires
+app/CMakeFiles/app.dir/requires: app/CMakeFiles/app.dir/__/samd21/interrupt-handlers.c.obj.requires
+app/CMakeFiles/app.dir/requires: app/CMakeFiles/app.dir/__/samd21/startup.c.obj.requires
 app/CMakeFiles/app.dir/requires: app/CMakeFiles/app.dir/__/util/dynamic-memory.cc.obj.requires
 app/CMakeFiles/app.dir/requires: app/CMakeFiles/app.dir/__/util/syscalls.c.obj.requires
 app/CMakeFiles/app.dir/requires: app/CMakeFiles/app.dir/main.cc.obj.requires

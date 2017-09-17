@@ -7,4 +7,5 @@ auto SoftwareReset() -> void;
 
 }  // namespace util
 
-#endif // UTIL_RESET_H_
+#endif  // UTIL_RESET_H_
+

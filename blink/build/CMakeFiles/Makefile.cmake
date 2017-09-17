@@ -51,6 +51,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "app/CMakeFiles/app.dir/DependInfo.cmake"
   "perhipial/CMakeFiles/led.dir/DependInfo.cmake"
   "util/CMakeFiles/clock.dir/DependInfo.cmake"
-  "util/CMakeFiles/delay.dir/DependInfo.cmake"
   "util/CMakeFiles/reset.dir/DependInfo.cmake"
+  "util/CMakeFiles/delay.dir/DependInfo.cmake"
   )

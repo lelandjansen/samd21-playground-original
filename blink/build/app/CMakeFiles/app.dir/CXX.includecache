@@ -29,8 +29,8 @@ cstdint
 -
 
 /home/leland/projects/samd21-playground/blink/src/util/dynamic-memory.cc
-dynamic-memory.h
-/home/leland/projects/samd21-playground/blink/src/util/dynamic-memory.h
+util/dynamic-memory.h
+/home/leland/projects/samd21-playground/blink/src/util/util/dynamic-memory.h
 
 /home/leland/projects/samd21-playground/blink/src/util/dynamic-memory.h
 cstdlib

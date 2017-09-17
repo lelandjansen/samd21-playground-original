@@ -1,13 +1,14 @@
-#include "reset.h"
+#include "util/reset.h"
 
 #include "samd21/samd21.h"
-#include "wait.h"
+#include "util/wait.h"
 
 namespace util {
 
 auto SoftwareReset() -> void {
-    GCLK->CTRL.reg = GCLK_CTRL_SWRST ;
-	WAIT_UNTIL(((GCLK->CTRL.reg & GCLK_CTRL_SWRST) && (GCLK->STATUS.reg & GCLK_STATUS_SYNCBUSY)) == false);
+  GCLK->CTRL.reg = GCLK_CTRL_SWRST;
+	WAIT_WHILE((GCLK->CTRL.reg & GCLK_CTRL_SWRST) &&
+             (GCLK->STATUS.reg & GCLK_STATUS_SYNCBUSY));
 }
 
 }  // namespace util

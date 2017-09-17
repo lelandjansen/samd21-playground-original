@@ -44,8 +44,8 @@
  * Support and FAQ: visit <a href="http://www.atmel.com/design-support/">Atmel Support</a>
  */
 
-#ifndef _SAMD21J18A_PIO_
-#define _SAMD21J18A_PIO_
+#ifndef SAMD21_PIO_SAMD21J18A_H_
+#define SAMD21_PIO_SAMD21J18A_H_
 
 #define PIN_PA00                           0  /**< \brief Pin Number for PA00 */
 #define PORT_PA00                 (1ul <<  0) /**< \brief PORT Mask  for PA00 */
@@ -1189,4 +1189,5 @@
 #define PINMUX_PB16G_I2S_SD1       ((PIN_PB16G_I2S_SD1 << 16) | MUX_PB16G_I2S_SD1)
 #define PORT_PB16G_I2S_SD1         (1ul << 16)
 
-#endif /* _SAMD21J18A_PIO_ */
+#endif  // SAMD21_PIO_SAMD21J18A_H_
+

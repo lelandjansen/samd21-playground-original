@@ -125,32 +125,59 @@ app/fast:
 	cd /home/leland/projects/samd21-playground/blink/build && $(MAKE) -f app/CMakeFiles/app.dir/build.make app/CMakeFiles/app.dir/build
 .PHONY : app/fast
 
-__/samd21/startup_samd21.obj: __/samd21/startup_samd21.c.obj
+__/samd21/interrupt-handlers.obj: __/samd21/interrupt-handlers.c.obj
 
-.PHONY : __/samd21/startup_samd21.obj
+.PHONY : __/samd21/interrupt-handlers.obj
 
 # target to build an object file
-__/samd21/startup_samd21.c.obj:
-	cd /home/leland/projects/samd21-playground/blink/build && $(MAKE) -f app/CMakeFiles/app.dir/build.make app/CMakeFiles/app.dir/__/samd21/startup_samd21.c.obj
-.PHONY : __/samd21/startup_samd21.c.obj
+__/samd21/interrupt-handlers.c.obj:
+	cd /home/leland/projects/samd21-playground/blink/build && $(MAKE) -f app/CMakeFiles/app.dir/build.make app/CMakeFiles/app.dir/__/samd21/interrupt-handlers.c.obj
+.PHONY : __/samd21/interrupt-handlers.c.obj
 
-__/samd21/startup_samd21.i: __/samd21/startup_samd21.c.i
+__/samd21/interrupt-handlers.i: __/samd21/interrupt-handlers.c.i
 
-.PHONY : __/samd21/startup_samd21.i
+.PHONY : __/samd21/interrupt-handlers.i
 
 # target to preprocess a source file
-__/samd21/startup_samd21.c.i:
-	cd /home/leland/projects/samd21-playground/blink/build && $(MAKE) -f app/CMakeFiles/app.dir/build.make app/CMakeFiles/app.dir/__/samd21/startup_samd21.c.i
-.PHONY : __/samd21/startup_samd21.c.i
+__/samd21/interrupt-handlers.c.i:
+	cd /home/leland/projects/samd21-playground/blink/build && $(MAKE) -f app/CMakeFiles/app.dir/build.make app/CMakeFiles/app.dir/__/samd21/interrupt-handlers.c.i
+.PHONY : __/samd21/interrupt-handlers.c.i
 
-__/samd21/startup_samd21.s: __/samd21/startup_samd21.c.s
+__/samd21/interrupt-handlers.s: __/samd21/interrupt-handlers.c.s
 
-.PHONY : __/samd21/startup_samd21.s
+.PHONY : __/samd21/interrupt-handlers.s
 
 # target to generate assembly for a file
-__/samd21/startup_samd21.c.s:
-	cd /home/leland/projects/samd21-playground/blink/build && $(MAKE) -f app/CMakeFiles/app.dir/build.make app/CMakeFiles/app.dir/__/samd21/startup_samd21.c.s
-.PHONY : __/samd21/startup_samd21.c.s
+__/samd21/interrupt-handlers.c.s:
+	cd /home/leland/projects/samd21-playground/blink/build && $(MAKE) -f app/CMakeFiles/app.dir/build.make app/CMakeFiles/app.dir/__/samd21/interrupt-handlers.c.s
+.PHONY : __/samd21/interrupt-handlers.c.s
+
+__/samd21/startup.obj: __/samd21/startup.c.obj
+
+.PHONY : __/samd21/startup.obj
+
+# target to build an object file
+__/samd21/startup.c.obj:
+	cd /home/leland/projects/samd21-playground/blink/build && $(MAKE) -f app/CMakeFiles/app.dir/build.make app/CMakeFiles/app.dir/__/samd21/startup.c.obj
+.PHONY : __/samd21/startup.c.obj
+
+__/samd21/startup.i: __/samd21/startup.c.i
+
+.PHONY : __/samd21/startup.i
+
+# target to preprocess a source file
+__/samd21/startup.c.i:
+	cd /home/leland/projects/samd21-playground/blink/build && $(MAKE) -f app/CMakeFiles/app.dir/build.make app/CMakeFiles/app.dir/__/samd21/startup.c.i
+.PHONY : __/samd21/startup.c.i
+
+__/samd21/startup.s: __/samd21/startup.c.s
+
+.PHONY : __/samd21/startup.s
+
+# target to generate assembly for a file
+__/samd21/startup.c.s:
+	cd /home/leland/projects/samd21-playground/blink/build && $(MAKE) -f app/CMakeFiles/app.dir/build.make app/CMakeFiles/app.dir/__/samd21/startup.c.s
+.PHONY : __/samd21/startup.c.s
 
 __/util/dynamic-memory.obj: __/util/dynamic-memory.cc.obj
 
@@ -242,9 +269,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... app"
-	@echo "... __/samd21/startup_samd21.obj"
-	@echo "... __/samd21/startup_samd21.i"
-	@echo "... __/samd21/startup_samd21.s"
+	@echo "... __/samd21/interrupt-handlers.obj"
+	@echo "... __/samd21/interrupt-handlers.i"
+	@echo "... __/samd21/interrupt-handlers.s"
+	@echo "... __/samd21/startup.obj"
+	@echo "... __/samd21/startup.i"
+	@echo "... __/samd21/startup.s"
 	@echo "... __/util/dynamic-memory.obj"
 	@echo "... __/util/dynamic-memory.i"
 	@echo "... __/util/dynamic-memory.s"

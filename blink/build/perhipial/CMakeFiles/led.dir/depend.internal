@@ -28,11 +28,9 @@ perhipial/CMakeFiles/led.dir/led/led0.cc.obj
  /home/leland/projects/samd21-playground/blink/src/samd21/component/sysctrl.h
  /home/leland/projects/samd21-playground/blink/src/samd21/component/tc.h
  /home/leland/projects/samd21-playground/blink/src/samd21/component/tcc.h
- /home/leland/projects/samd21-playground/blink/src/samd21/component/tcc_lighting.h
  /home/leland/projects/samd21-playground/blink/src/samd21/component/usb.h
  /home/leland/projects/samd21-playground/blink/src/samd21/component/wdt.h
  /home/leland/projects/samd21-playground/blink/src/samd21/instance/ac.h
- /home/leland/projects/samd21-playground/blink/src/samd21/instance/ac1.h
  /home/leland/projects/samd21-playground/blink/src/samd21/instance/adc.h
  /home/leland/projects/samd21-playground/blink/src/samd21/instance/dac.h
  /home/leland/projects/samd21-playground/blink/src/samd21/instance/dmac.h
@@ -67,57 +65,7 @@ perhipial/CMakeFiles/led.dir/led/led0.cc.obj
  /home/leland/projects/samd21-playground/blink/src/samd21/instance/tcc2.h
  /home/leland/projects/samd21-playground/blink/src/samd21/instance/usb.h
  /home/leland/projects/samd21-playground/blink/src/samd21/instance/wdt.h
- /home/leland/projects/samd21-playground/blink/src/samd21/pio/samd21e15a.h
- /home/leland/projects/samd21-playground/blink/src/samd21/pio/samd21e15b.h
- /home/leland/projects/samd21-playground/blink/src/samd21/pio/samd21e15bu.h
- /home/leland/projects/samd21-playground/blink/src/samd21/pio/samd21e15l.h
- /home/leland/projects/samd21-playground/blink/src/samd21/pio/samd21e16a.h
- /home/leland/projects/samd21-playground/blink/src/samd21/pio/samd21e16b.h
- /home/leland/projects/samd21-playground/blink/src/samd21/pio/samd21e16bu.h
- /home/leland/projects/samd21-playground/blink/src/samd21/pio/samd21e16l.h
- /home/leland/projects/samd21-playground/blink/src/samd21/pio/samd21e17a.h
- /home/leland/projects/samd21-playground/blink/src/samd21/pio/samd21e18a.h
- /home/leland/projects/samd21-playground/blink/src/samd21/pio/samd21g15a.h
- /home/leland/projects/samd21-playground/blink/src/samd21/pio/samd21g15b.h
- /home/leland/projects/samd21-playground/blink/src/samd21/pio/samd21g15l.h
- /home/leland/projects/samd21-playground/blink/src/samd21/pio/samd21g16a.h
- /home/leland/projects/samd21-playground/blink/src/samd21/pio/samd21g16b.h
- /home/leland/projects/samd21-playground/blink/src/samd21/pio/samd21g16l.h
- /home/leland/projects/samd21-playground/blink/src/samd21/pio/samd21g17a.h
- /home/leland/projects/samd21-playground/blink/src/samd21/pio/samd21g17au.h
- /home/leland/projects/samd21-playground/blink/src/samd21/pio/samd21g18a.h
- /home/leland/projects/samd21-playground/blink/src/samd21/pio/samd21g18au.h
- /home/leland/projects/samd21-playground/blink/src/samd21/pio/samd21j15a.h
- /home/leland/projects/samd21-playground/blink/src/samd21/pio/samd21j15b.h
- /home/leland/projects/samd21-playground/blink/src/samd21/pio/samd21j16a.h
- /home/leland/projects/samd21-playground/blink/src/samd21/pio/samd21j16b.h
- /home/leland/projects/samd21-playground/blink/src/samd21/pio/samd21j17a.h
+ /home/leland/projects/samd21-playground/blink/src/samd21/interrupt-handlers.h
  /home/leland/projects/samd21-playground/blink/src/samd21/pio/samd21j18a.h
  /home/leland/projects/samd21-playground/blink/src/samd21/samd21.h
- /home/leland/projects/samd21-playground/blink/src/samd21/samd21e15a.h
- /home/leland/projects/samd21-playground/blink/src/samd21/samd21e15b.h
- /home/leland/projects/samd21-playground/blink/src/samd21/samd21e15bu.h
- /home/leland/projects/samd21-playground/blink/src/samd21/samd21e15l.h
- /home/leland/projects/samd21-playground/blink/src/samd21/samd21e16a.h
- /home/leland/projects/samd21-playground/blink/src/samd21/samd21e16b.h
- /home/leland/projects/samd21-playground/blink/src/samd21/samd21e16bu.h
- /home/leland/projects/samd21-playground/blink/src/samd21/samd21e16l.h
- /home/leland/projects/samd21-playground/blink/src/samd21/samd21e17a.h
- /home/leland/projects/samd21-playground/blink/src/samd21/samd21e18a.h
- /home/leland/projects/samd21-playground/blink/src/samd21/samd21g15a.h
- /home/leland/projects/samd21-playground/blink/src/samd21/samd21g15b.h
- /home/leland/projects/samd21-playground/blink/src/samd21/samd21g15l.h
- /home/leland/projects/samd21-playground/blink/src/samd21/samd21g16a.h
- /home/leland/projects/samd21-playground/blink/src/samd21/samd21g16b.h
- /home/leland/projects/samd21-playground/blink/src/samd21/samd21g16l.h
- /home/leland/projects/samd21-playground/blink/src/samd21/samd21g17a.h
- /home/leland/projects/samd21-playground/blink/src/samd21/samd21g17au.h
- /home/leland/projects/samd21-playground/blink/src/samd21/samd21g18a.h
- /home/leland/projects/samd21-playground/blink/src/samd21/samd21g18au.h
- /home/leland/projects/samd21-playground/blink/src/samd21/samd21j15a.h
- /home/leland/projects/samd21-playground/blink/src/samd21/samd21j15b.h
- /home/leland/projects/samd21-playground/blink/src/samd21/samd21j16a.h
- /home/leland/projects/samd21-playground/blink/src/samd21/samd21j16b.h
- /home/leland/projects/samd21-playground/blink/src/samd21/samd21j17a.h
  /home/leland/projects/samd21-playground/blink/src/samd21/samd21j18a.h
- /home/leland/projects/samd21-playground/blink/src/samd21/system_samd21.h

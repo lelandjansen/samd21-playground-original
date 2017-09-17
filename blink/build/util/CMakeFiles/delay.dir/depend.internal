@@ -62,9 +62,10 @@ util/CMakeFiles/delay.dir/delay.cc.obj
  /home/leland/projects/samd21-playground/blink/src/samd21/instance/tcc2.h
  /home/leland/projects/samd21-playground/blink/src/samd21/instance/usb.h
  /home/leland/projects/samd21-playground/blink/src/samd21/instance/wdt.h
+ /home/leland/projects/samd21-playground/blink/src/samd21/interrupt-handlers.h
  /home/leland/projects/samd21-playground/blink/src/samd21/pio/samd21j18a.h
+ /home/leland/projects/samd21-playground/blink/src/samd21/samd21.h
  /home/leland/projects/samd21-playground/blink/src/samd21/samd21j18a.h
- /home/leland/projects/samd21-playground/blink/src/samd21/system_samd21.h
  /home/leland/projects/samd21-playground/blink/src/util/clock.h
  /home/leland/projects/samd21-playground/blink/src/util/delay.cc
  /home/leland/projects/samd21-playground/blink/src/util/delay.h

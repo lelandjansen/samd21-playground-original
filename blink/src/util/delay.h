@@ -12,4 +12,5 @@ auto DelayClockCycles(uint32_t cycles) -> void;
 
 }  // namespace util
 
-#endif // UTIL_DELAY_H_
+#endif  // UTIL_DELAY_H_
+

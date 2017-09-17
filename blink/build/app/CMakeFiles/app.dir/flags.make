@@ -3,13 +3,13 @@
 
 # compile C with /usr/bin/gcc-arm-none-eabi/bin/arm-none-eabi-gcc
 # compile CXX with /usr/bin/gcc-arm-none-eabi/bin/arm-none-eabi-g++
-C_FLAGS =   -mcpu=cortex-m0   -mthumb   -g   -Wl,--start-group   -lgcc   -lc   -lm   -lrdimon   -Wl,--end-group  
+C_FLAGS =     -mcpu=cortex-m0   -mthumb   -O3   -Wall   -Wextra   -Wpedantic  
 
 C_DEFINES = -D__SAMD21J18A__
 
 C_INCLUDES = -I/home/leland/projects/samd21-playground/blink/src 
 
-CXX_FLAGS =   -specs=nosys.specs   -mcpu=cortex-m0   -mthumb   -g   -lc   -lm   -lrdimon   -Wall   -Wextra   -Wpedantic   -fno-exceptions   -std=gnu++14
+CXX_FLAGS =     -mcpu=cortex-m0   -mthumb   -O3   -Wall   -Wextra   -Wpedantic   -specs=nosys.specs   -fno-exceptions   -std=gnu++14
 
 CXX_DEFINES = -D__SAMD21J18A__
 
