@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/lelandjansen/samd21-playground.svg?style=svg)](https://circleci.com/gh/lelandjansen/samd21-playground)
+
 http://omzlo.com/articles/programming-samd21-using-atmel-ice-with-openocd
 
 To install the latest version of CMake

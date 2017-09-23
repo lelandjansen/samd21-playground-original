@@ -10,10 +10,13 @@ set(CMAKE_CXX_STANDARD 14)
 if(CMAKE_BUILD_TYPE MATCHES DEBUG)
   message("DEBUG mode")
   set(build_type_flags "-g -Og")
+  set(CMAKE_CXX_CLANG_TIDY "clang-tidy-5.0")
 else()
   message("RELEASE mode")
-  set(build_type_flags "-O3")
+  set(build_type_flags "-O3 -Werror")
+  set(CMAKE_CXX_CLANG_TIDY "clang-tidy-5.0;-warnings-as-errors=*")
 endif()
+
 set(common_flags "\
   -mcpu=cortex-m0 \
   -mthumb \

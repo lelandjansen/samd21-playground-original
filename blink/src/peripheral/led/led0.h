@@ -1,7 +1,7 @@
-#ifndef PERHIPIAL_LED_LED0_H_
-#define PERHIPIAL_LED_LED0_H_
+#ifndef PERIPHERAL_LED_LED0_H_ 
+#define PERIPHERAL_LED_LED0_H_ 
 
-#include "gpio-led-interface.h"
+#include "peripheral/led/gpio-led-interface.h"
 
 namespace peripheral {
 
@@ -19,5 +19,5 @@ class Led0 : GpioLedInterface {
 
 }  // namespace peripheral
 
-#endif  // PERHIPIAL_LED_LED0_H_
+#endif  // PERHIPHERAL_LED_LED0_H_
 

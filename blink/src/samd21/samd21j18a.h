@@ -600,18 +600,18 @@ typedef struct _DeviceVectors
 #define NVMCTRL_INST_NUM  1                          /**< \brief (NVMCTRL) Number of instances */
 #define NVMCTRL_INSTS     { NVMCTRL }                /**< \brief (NVMCTRL) Instances List */
 
-#define PAC0              ((Pac      *)0x40000000UL) /**< \brief (PAC0) APB Base Address */
-#define PAC1              ((Pac      *)0x41000000UL) /**< \brief (PAC1) APB Base Address */
-#define PAC2              ((Pac      *)0x42000000UL) /**< \brief (PAC2) APB Base Address */
-#define PAC_INST_NUM      3                          /**< \brief (PAC) Number of instances */
+#define PAC0              ((Pac      *)0x40000000UL) /**< \brief (PAC0) APB Base Address */ // NOLINT
+#define PAC1              ((Pac      *)0x41000000UL) /**< \brief (PAC1) APB Base Address */ // NOLINT
+#define PAC2              ((Pac      *)0x42000000UL) /**< \brief (PAC2) APB Base Address */ // NOLINT
+#define PAC_INST_NUM      3                          /**< \brief (PAC) Number of instances */ // NOLINT
 #define PAC_INSTS         { PAC0, PAC1, PAC2 }       /**< \brief (PAC) Instances List */
 
-#define PM                ((Pm       *)0x40000400UL) /**< \brief (PM) APB Base Address */
+#define PM                ((Pm       *)0x40000400UL) /**< \brief (PM) APB Base Address */ // NOLINT
 #define PM_INST_NUM       1                          /**< \brief (PM) Number of instances */
 #define PM_INSTS          { PM }                     /**< \brief (PM) Instances List */
 
-#define PORT              ((Port     *)0x41004400UL) /**< \brief (PORT) APB Base Address */
-#define PORT_IOBUS        ((Port     *)0x60000000UL) /**< \brief (PORT) IOBUS Base Address */
+#define PORT              ((Port     *)0x41004400UL) /**< \brief (PORT) APB Base Address */ // NOLINT
+#define PORT_IOBUS        ((Port     *)0x60000000UL) /**< \brief (PORT) IOBUS Base Address */ // NOLINT
 #define PORT_INST_NUM     1                          /**< \brief (PORT) Number of instances */
 #define PORT_INSTS        { PORT }                   /**< \brief (PORT) Instances List */
 
@@ -619,42 +619,42 @@ typedef struct _DeviceVectors
 #define PTC_INST_NUM      1                          /**< \brief (PTC) Number of instances */
 #define PTC_INSTS         { PTC }                    /**< \brief (PTC) Instances List */
 
-#define RTC               ((Rtc      *)0x40001400UL) /**< \brief (RTC) APB Base Address */
+#define RTC               ((Rtc      *)0x40001400UL) /**< \brief (RTC) APB Base Address */ // NOLINT
 #define RTC_INST_NUM      1                          /**< \brief (RTC) Number of instances */
 #define RTC_INSTS         { RTC }                    /**< \brief (RTC) Instances List */
 
-#define SERCOM0           ((Sercom   *)0x42000800UL) /**< \brief (SERCOM0) APB Base Address */
-#define SERCOM1           ((Sercom   *)0x42000C00UL) /**< \brief (SERCOM1) APB Base Address */
-#define SERCOM2           ((Sercom   *)0x42001000UL) /**< \brief (SERCOM2) APB Base Address */
-#define SERCOM3           ((Sercom   *)0x42001400UL) /**< \brief (SERCOM3) APB Base Address */
-#define SERCOM4           ((Sercom   *)0x42001800UL) /**< \brief (SERCOM4) APB Base Address */
-#define SERCOM5           ((Sercom   *)0x42001C00UL) /**< \brief (SERCOM5) APB Base Address */
+#define SERCOM0           ((Sercom   *)0x42000800UL) /**< \brief (SERCOM0) APB Base Address */ // NOLINT
+#define SERCOM1           ((Sercom   *)0x42000C00UL) /**< \brief (SERCOM1) APB Base Address */ // NOLINT
+#define SERCOM2           ((Sercom   *)0x42001000UL) /**< \brief (SERCOM2) APB Base Address */ // NOLINT
+#define SERCOM3           ((Sercom   *)0x42001400UL) /**< \brief (SERCOM3) APB Base Address */ // NOLINT
+#define SERCOM4           ((Sercom   *)0x42001800UL) /**< \brief (SERCOM4) APB Base Address */ // NOLINT
+#define SERCOM5           ((Sercom   *)0x42001C00UL) /**< \brief (SERCOM5) APB Base Address */ // NOLINT
 #define SERCOM_INST_NUM   6                          /**< \brief (SERCOM) Number of instances */
 #define SERCOM_INSTS      { SERCOM0, SERCOM1, SERCOM2, SERCOM3, SERCOM4, SERCOM5 } /**< \brief (SERCOM) Instances List */
 
-#define SYSCTRL           ((Sysctrl  *)0x40000800UL) /**< \brief (SYSCTRL) APB Base Address */
+#define SYSCTRL           ((Sysctrl  *)0x40000800UL) /**< \brief (SYSCTRL) APB Base Address */ // NOLINT
 #define SYSCTRL_INST_NUM  1                          /**< \brief (SYSCTRL) Number of instances */
 #define SYSCTRL_INSTS     { SYSCTRL }                /**< \brief (SYSCTRL) Instances List */
 
-#define TC3               ((Tc       *)0x42002C00UL) /**< \brief (TC3) APB Base Address */
-#define TC4               ((Tc       *)0x42003000UL) /**< \brief (TC4) APB Base Address */
-#define TC5               ((Tc       *)0x42003400UL) /**< \brief (TC5) APB Base Address */
-#define TC6               ((Tc       *)0x42003800UL) /**< \brief (TC6) APB Base Address */
-#define TC7               ((Tc       *)0x42003C00UL) /**< \brief (TC7) APB Base Address */
+#define TC3               ((Tc       *)0x42002C00UL) /**< \brief (TC3) APB Base Address */ // NOLINT
+#define TC4               ((Tc       *)0x42003000UL) /**< \brief (TC4) APB Base Address */ // NOLINT
+#define TC5               ((Tc       *)0x42003400UL) /**< \brief (TC5) APB Base Address */ // NOLINT
+#define TC6               ((Tc       *)0x42003800UL) /**< \brief (TC6) APB Base Address */ // NOLINT
+#define TC7               ((Tc       *)0x42003C00UL) /**< \brief (TC7) APB Base Address */ // NOLINT
 #define TC_INST_NUM       5                          /**< \brief (TC) Number of instances */
 #define TC_INSTS          { TC3, TC4, TC5, TC6, TC7 } /**< \brief (TC) Instances List */
 
-#define TCC0              ((Tcc      *)0x42002000UL) /**< \brief (TCC0) APB Base Address */
-#define TCC1              ((Tcc      *)0x42002400UL) /**< \brief (TCC1) APB Base Address */
-#define TCC2              ((Tcc      *)0x42002800UL) /**< \brief (TCC2) APB Base Address */
+#define TCC0              ((Tcc      *)0x42002000UL) /**< \brief (TCC0) APB Base Address */ // NOLINT
+#define TCC1              ((Tcc      *)0x42002400UL) /**< \brief (TCC1) APB Base Address */ // NOLINT
+#define TCC2              ((Tcc      *)0x42002800UL) /**< \brief (TCC2) APB Base Address */ // NOLINT
 #define TCC_INST_NUM      3                          /**< \brief (TCC) Number of instances */
 #define TCC_INSTS         { TCC0, TCC1, TCC2 }       /**< \brief (TCC) Instances List */
 
-#define USB               ((Usb      *)0x41005000UL) /**< \brief (USB) APB Base Address */
+#define USB               ((Usb      *)0x41005000UL) /**< \brief (USB) APB Base Address */ // NOLINT
 #define USB_INST_NUM      1                          /**< \brief (USB) Number of instances */
 #define USB_INSTS         { USB }                    /**< \brief (USB) Instances List */
 
-#define WDT               ((Wdt      *)0x40001000UL) /**< \brief (WDT) APB Base Address */
+#define WDT               ((Wdt      *)0x40001000UL) /**< \brief (WDT) APB Base Address */ // NOLINT
 #define WDT_INST_NUM      1                          /**< \brief (WDT) Number of instances */
 #define WDT_INSTS         { WDT }                    /**< \brief (WDT) Instances List */
 
