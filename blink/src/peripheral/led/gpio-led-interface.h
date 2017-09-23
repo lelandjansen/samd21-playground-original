@@ -1,5 +1,5 @@
-#ifndef PERHIPIAL_LED_GPIO_LED_INTERFACE_H_
-#define PERHIPIAL_LED_GPIO_LED_INTERFACE_H_
+#ifndef PERIPHERAL_LED_GPIO_LED_INTERFACE_H_
+#define PERIPHERAL_LED_GPIO_LED_INTERFACE_H_
 
 namespace peripheral {
 
@@ -17,5 +17,5 @@ class GpioLedInterface {
 
 }  // namespace peripheral
 
-#endif  // PERHIPIAL_LED_GPIO_LED_INTERFACE_H_
+#endif  // PERIPHERAL_LED_GPIO_LED_INTERFACE_H_
 

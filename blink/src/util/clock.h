@@ -1,5 +1,5 @@
 #ifndef UTIL_CLOCK_H_
-#define UITL_CLOCK_H_
+#define UTIL_CLOCK_H_
 
 #include <cstdint>
 
