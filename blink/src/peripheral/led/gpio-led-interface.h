@@ -1,7 +1,7 @@
 #ifndef PERHIPIAL_LED_GPIO_LED_INTERFACE_H_
 #define PERHIPIAL_LED_GPIO_LED_INTERFACE_H_
 
-namespace perhipial {
+namespace peripheral {
 
 class GpioLedInterface {
  public:
@@ -15,7 +15,7 @@ class GpioLedInterface {
   GpioLedInterface& operator=(const GpioLedInterface&) = delete;
 };
 
-}  // namespace perhipial
+}  // namespace peripheral
 
 #endif  // PERHIPIAL_LED_GPIO_LED_INTERFACE_H_
 

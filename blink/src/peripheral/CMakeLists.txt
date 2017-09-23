@@ -1,4 +1,4 @@
-project(perhipial)
+project(peripheral)
 
 add_library(led STATIC
     led/led0.cc)

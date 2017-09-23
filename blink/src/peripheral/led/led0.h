@@ -3,7 +3,7 @@
 
 #include "gpio-led-interface.h"
 
-namespace perhipial {
+namespace peripheral {
 
 class Led0 : GpioLedInterface {
  public:
@@ -17,7 +17,7 @@ class Led0 : GpioLedInterface {
   static bool instantiated_;
 };
 
-}  // namespace perhipial
+}  // namespace peripheral
 
 #endif  // PERHIPIAL_LED_LED0_H_
 

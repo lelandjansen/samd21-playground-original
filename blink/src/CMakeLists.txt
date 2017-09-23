@@ -34,7 +34,7 @@ add_definitions(-D__SAMD21J18A__)
 project(blink)
 add_subdirectory(app)
 add_subdirectory(cmsis)
-add_subdirectory(perhipial)
+add_subdirectory(peripheral)
 add_subdirectory(samd21)
 add_subdirectory(util)
 
