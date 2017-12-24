@@ -1,4 +1,4 @@
-#include <asf.h>
+#include "asf/asf.h"
 
 int main (void) {
   system_init();

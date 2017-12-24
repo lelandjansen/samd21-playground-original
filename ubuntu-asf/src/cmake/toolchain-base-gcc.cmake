@@ -3,10 +3,14 @@
 
 # Required for cross compilation or the compiler test fails due to linker flags
 set(CMAKE_TRY_COMPILE_TARGET_TYPE STATIC_LIBRARY)
+
 # Names of compiler based on the "ARM GNU Embedded Toolchain" that ARM provides
 set(CMAKE_C_COMPILER "${GCC_TOOLCHAIN_PREFIX}gcc")
 set(CMAKE_CXX_COMPILER "${GCC_TOOLCHAIN_PREFIX}g++")
 set(CMAKE_ASM_COMPILER "${GCC_TOOLCHAIN_PREFIX}as")
+
+set(CMAKE_C_STANANDDARD 99)
+set(CMAKE_CXX_STANDARD 14)
 
 if (NOT DEFINED CMAKE_SIZE)
   find_program (CMAKE_SIZE "${GCC_TOOLCHAIN_PREFIX}size")

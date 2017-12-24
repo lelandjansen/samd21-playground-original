@@ -41,8 +41,8 @@
  *
  */
 
-#ifndef ASF_H
-#define ASF_H
+#ifndef ASF_ASF_H_
+#define ASF_ASF_H_
 
 /*
  * This file includes all API header files for the selected drivers from ASF.
@@ -117,4 +117,4 @@
 #include <wdt.h>
 #include <wdt_callback.h>
 
-#endif // ASF_H
+#endif  // ASF_ASF_H_

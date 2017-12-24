@@ -1,7 +1,7 @@
 list(APPEND VENDOR_ATMEL_ASF_SRC_FILES
-  "src/asf/${ATMEL_GENERAL_FAMILY}/drivers/tc/tc_sam_d_r_h/tc.c")
+  "${ASF_ROOT}/${ATMEL_GENERAL_FAMILY}/drivers/tc/tc_sam_d_r_h/tc.c")
 list(APPEND VENDOR_ATMEL_ASF_INCLUDES
-  "src/asf/${ATMEL_GENERAL_FAMILY}/drivers/tc")
+  "${ASF_ROOT}/${ATMEL_GENERAL_FAMILY}/drivers/tc")
 
 if (DEFINED VENDOR_ATMEL_ASF_DRIVER_TC_OPT_ASYNC)
   if(VENDOR_ATMEL_ASF_DRIVER_TC_OPT_ASYNC)

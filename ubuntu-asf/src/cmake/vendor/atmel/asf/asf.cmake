@@ -35,9 +35,9 @@ if (VENDOR_ATMEL_ASF_SERVICE_EEPROM)
 endif()
 
 list(APPEND VENDOR_ATMEL_ASF_INCLUDES
-  "src/asf/thirdparty/Lib/GCC"
-  "src/asf/thirdparty/CMSIS/Include"
-  "src/config")
+  "${ASF_ROOT}/thirdparty/Lib/GCC"
+  "${ASF_ROOT}/thirdparty/CMSIS/Include"
+  "${CMAKE_SOURCE_DIR}/config")
 
 include_directories(${VENDOR_ATMEL_ASF_INCLUDES})
 
@@ -54,4 +54,4 @@ endif()
 add_definitions(-DARM_MATH_CM0=true)
 list(APPEND VENDOR_LIBS
   vendor_lib_atmel_asf
-  "${CMAKE_SOURCE_DIR}/src/asf/thirdparty/CMSIS/Lib/GCC/${_ASF_LIBARM_MATH}")
+  "${ASF_ROOT}/thirdparty/CMSIS/Lib/GCC/${_ASF_LIBARM_MATH}")

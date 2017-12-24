@@ -35,7 +35,8 @@ if (_INCLUDED_FILE)
 endif()
 
 set(_INCLUDED_FILE 0)
-include(vendor/${CPU_VENDOR}/${CPU_TYPE} OPTIONAL RESULT_VARIABLE _INCLUDED_FILE)
+include(vendor/${CPU_VENDOR}/${CPU_TYPE}
+  OPTIONAL RESULT_VARIABLE _INCLUDED_FILE)
 
 if (_INCLUDED_FILE)
   message("CPU CMake Specific configuration loaded")
@@ -43,6 +44,6 @@ endif()
 
 
 set(CMAKE_C_FLAGS "${CMAKE_CXX_FLAGS} -mcpu=${CPU_MCPU}")
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -mcpu==${CPU_MCPU}")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -mcpu=${CPU_MCPU}")
 
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -T ${LINKER_SCRIPT}")
