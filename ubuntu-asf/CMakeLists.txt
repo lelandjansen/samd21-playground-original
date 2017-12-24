@@ -1,13 +1,13 @@
 cmake_minimum_required(VERSION 3.7)
 
-# Load the toolchain definition before the project is declared or else it won't work!
+# Load toolchain definition before the project is declared or it will not work
 set (CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 include(toolchain-gnu-arm)
 
 ###
 # Project Start
 ###
-project(helloworld)
+project(blink)
 
 ###
 # embedded-cmaker Configuration
@@ -38,7 +38,6 @@ include_directories(${VENDOR_INCLUDES})
 
 add_executable(${TARGET_OUTPUT_NAME}
   src/main.c)
-#  src/BL/boards/board_4d52001a.c)
 target_link_libraries(${TARGET_OUTPUT_NAME} ${VENDOR_LIBS})
 
 gcc_generate_map()

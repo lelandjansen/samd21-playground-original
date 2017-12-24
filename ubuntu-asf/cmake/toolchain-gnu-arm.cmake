@@ -1,9 +1,8 @@
-
 set(CMAKE_SYSTEM_NAME Generic)
 set(CMAKE_SYSTEM_PROCESSOR arm)
 
 if ("${GCC_TOOLCHAIN_PREFIX}" STREQUAL "")
-    set(GCC_TOOLCHAIN_PREFIX "arm-none-eabi-")
+  set(GCC_TOOLCHAIN_PREFIX "arm-none-eabi-")
 endif()
 
 set(BASE_DEBUG_FLAGS "-O0 -g3 -DDEBUG")
