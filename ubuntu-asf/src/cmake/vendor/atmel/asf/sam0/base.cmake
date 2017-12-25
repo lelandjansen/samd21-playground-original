@@ -1,4 +1,3 @@
-message("!!!!!!!!!! ${ASF_ROOT}/${ATMEL_GENERAL_FAMILY}/utils/syscalls/gcc/syscalls.c")
 list(APPEND VENDOR_ATMEL_ASF_SRC_FILES
     "${ASF_ROOT}/${ATMEL_GENERAL_FAMILY}/utils/syscalls/gcc/syscalls.c"
     "${ASF_ROOT}/common/utils/interrupt/interrupt_sam_nvic.c"

@@ -42,7 +42,9 @@ endif()
 
 set(COMMON_FLAGS "\
     -mcpu=${CPU_MCPU} \
-    ")
+    -Wall \
+    -Wextra \
+    -Wpedantic")
 set(CMAKE_C_FLAGS "\
     ${CMAKE_CXX_FLAGS} \
     ${COMMON_FLAGS}")
@@ -52,10 +54,4 @@ set(CMAKE_CXX_FLAGS "\
     -fno-exceptions")
 set(CMAKE_EXE_LINKER_FLAGS "\
     ${CMAKE_EXE_LINKER_FLAGS} \
-    -T ${LINKER_SCRIPT}
-    ")
-
-    #-specs=nosys.specs \
-    #-Wall \
-    #-Wextra \
-    #-Wpedantic-mthumb \
+    -T ${LINKER_SCRIPT}")

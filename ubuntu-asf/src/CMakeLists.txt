@@ -1,6 +1,5 @@
 cmake_minimum_required(VERSION 3.7 FATAL_ERROR)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
-
 set(ASF_ROOT ${CMAKE_SOURCE_DIR}/asf)
 
 # Load toolchain definition before the project is declared or it will not work
@@ -35,6 +34,5 @@ include_directories(${CMAKE_SOURCE_DIR})
 
 add_subdirectory(app)
 add_subdirectory(peripheral)
-#add_subdirectory(util)
 
 gcc_generate_map()

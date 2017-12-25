@@ -19,4 +19,5 @@ endif()
 set(CMAKE_EXE_LINKER_FLAGS "\
     -Wl,-gc-sections \
     -Wl,--entry=Reset_Handler \
-    -mthumb")
+    -mthumb \
+    -specs=nosys.specs")

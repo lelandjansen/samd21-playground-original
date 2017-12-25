@@ -1,4 +1,4 @@
-/*
+/**
  * \file
  *
  * \brief Linker script for running in internal FLASH on the SAMD21J18A
@@ -152,6 +152,13 @@ SECTIONS
         _estack = .;
     } > ram
 
-    . = ALIGN(4);
-    _end = . ;
+    /* heap section - added to define end */
+    .heap :
+    {
+        . = ALIGN(4);
+        __heap_start__ = .;
+        end = __heap_start__;
+        _end = end;
+        __end = end;
+    } > ram
 }
