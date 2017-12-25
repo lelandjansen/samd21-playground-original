@@ -9,7 +9,7 @@ set(CMAKE_C_COMPILER "${GCC_TOOLCHAIN_PREFIX}gcc")
 set(CMAKE_CXX_COMPILER "${GCC_TOOLCHAIN_PREFIX}g++")
 set(CMAKE_ASM_COMPILER "${GCC_TOOLCHAIN_PREFIX}as")
 
-set(CMAKE_C_STANANDDARD 99)
+set(CMAKE_C_STANDARD 99)
 set(CMAKE_CXX_STANDARD 14)
 
 if (NOT DEFINED CMAKE_SIZE)
@@ -44,5 +44,9 @@ function(gcc_generate_lss TARGET LSS_FILE)
 endfunction()
 
 function(gcc_generate_map)
-  set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,--cref -Wl,-Map=${CMAKE_BINARY_DIR}/${PROJECT_NAME}.map" PARENT_SCOPE)
+  set(CMAKE_EXE_LINKER_FLAGS "\
+      ${CMAKE_EXE_LINKER_FLAGS} \
+      -Wl,--cref \
+      -Wl,-Map=${CMAKE_BINARY_DIR}/${PROJECT_NAME}.map"
+      PARENT_SCOPE)
 endfunction()

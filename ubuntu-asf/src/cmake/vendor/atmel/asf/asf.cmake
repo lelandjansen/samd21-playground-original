@@ -35,14 +35,14 @@ if (VENDOR_ATMEL_ASF_SERVICE_EEPROM)
 endif()
 
 list(APPEND VENDOR_ATMEL_ASF_INCLUDES
-  "${ASF_ROOT}/thirdparty/Lib/GCC"
-  "${ASF_ROOT}/thirdparty/CMSIS/Include"
-  "${CMAKE_SOURCE_DIR}/config")
+    "${ASF_ROOT}/thirdparty/Lib/GCC"
+    "${ASF_ROOT}/thirdparty/CMSIS/Include"
+    "${CMAKE_SOURCE_DIR}/config")
 
 include_directories(${VENDOR_ATMEL_ASF_INCLUDES})
 
 add_library(vendor_lib_atmel_asf
-  ${VENDOR_ATMEL_ASF_SRC_FILES})
+    ${VENDOR_ATMEL_ASF_SRC_FILES})
 
 set(_ASF_LIBARM_MATH "")
 if (${ATMEL_GENERAL_FAMILY} STREQUAL "sam0")
@@ -53,5 +53,5 @@ endif()
 
 add_definitions(-DARM_MATH_CM0=true)
 list(APPEND VENDOR_LIBS
-  vendor_lib_atmel_asf
-  "${ASF_ROOT}/thirdparty/CMSIS/Lib/GCC/${_ASF_LIBARM_MATH}")
+    vendor_lib_atmel_asf
+    "${ASF_ROOT}/thirdparty/CMSIS/Lib/GCC/${_ASF_LIBARM_MATH}")

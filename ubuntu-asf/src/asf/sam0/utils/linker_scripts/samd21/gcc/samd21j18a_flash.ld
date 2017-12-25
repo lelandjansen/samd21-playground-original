@@ -1,4 +1,4 @@
-/**
+/*
  * \file
  *
  * \brief Linker script for running in internal FLASH on the SAMD21J18A

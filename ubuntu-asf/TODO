@@ -1,0 +1,2 @@
+- Get linking working with Reset_Handler
+- Get CMAKE_EXPORT_COMPILE_COMMANDS working

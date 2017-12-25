@@ -16,4 +16,7 @@ if(VENDOR_ATMEL_USE_ASF)
   include(vendor/atmel/asf/asf)
 endif()
 
-set(CMAKE_EXE_LINKER_FLAGS "-Wl,-gc-sections -Wl,--entry=Reset_Handler -mthumb")
+set(CMAKE_EXE_LINKER_FLAGS "\
+    -Wl,-gc-sections \
+    -Wl,--entry=Reset_Handler \
+    -mthumb")

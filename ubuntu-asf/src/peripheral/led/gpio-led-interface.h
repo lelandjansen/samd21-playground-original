@@ -18,4 +18,3 @@ class GpioLedInterface {
 }  // namespace peripheral
 
 #endif  // PERIPHERAL_LED_GPIO_LED_INTERFACE_H_
-

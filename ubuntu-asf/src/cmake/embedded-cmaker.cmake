@@ -29,7 +29,6 @@ set(VENDOR_LIBS "")
 
 set(_INCLUDED_FILE 0)
 include(vendor/${CPU_VENDOR}/vendor OPTIONAL RESULT_VARIABLE _INCLUDED_FILE)
-
 if (_INCLUDED_FILE)
   message("CPU Vendor Specific configuration loaded")
 endif()
@@ -37,13 +36,26 @@ endif()
 set(_INCLUDED_FILE 0)
 include(vendor/${CPU_VENDOR}/${CPU_TYPE}
   OPTIONAL RESULT_VARIABLE _INCLUDED_FILE)
-
 if (_INCLUDED_FILE)
   message("CPU CMake Specific configuration loaded")
 endif()
 
+set(COMMON_FLAGS "\
+    -mcpu=${CPU_MCPU} \
+    ")
+set(CMAKE_C_FLAGS "\
+    ${CMAKE_CXX_FLAGS} \
+    ${COMMON_FLAGS}")
+set(CMAKE_CXX_FLAGS "\
+    ${CMAKE_CXX_FLAGS} \
+    ${COMMON_FLAGS} \
+    -fno-exceptions")
+set(CMAKE_EXE_LINKER_FLAGS "\
+    ${CMAKE_EXE_LINKER_FLAGS} \
+    -T ${LINKER_SCRIPT}
+    ")
 
-set(CMAKE_C_FLAGS "${CMAKE_CXX_FLAGS} -mcpu=${CPU_MCPU}")
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -mcpu=${CPU_MCPU}")
-
-set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -T ${LINKER_SCRIPT}")
+    #-specs=nosys.specs \
+    #-Wall \
+    #-Wextra \
+    #-Wpedantic-mthumb \
