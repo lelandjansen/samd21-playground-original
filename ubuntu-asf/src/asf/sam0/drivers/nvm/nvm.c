@@ -193,7 +193,7 @@ enum status_code nvm_set_config(
 enum status_code nvm_execute_command(
 		const enum nvm_command command,
 		const uint32_t address,
-		const uint32_t parameter)
+		__attribute__ ((unused)) const uint32_t parameter)
 {
 	uint32_t ctrlb_bak;
 

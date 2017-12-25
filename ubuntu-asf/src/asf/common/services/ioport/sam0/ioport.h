@@ -288,8 +288,10 @@ inline static void arch_ioport_toggle_port_level(ioport_port_t port,
 	arch_ioport_port_to_base(port)->OUTTGL.reg = mask;
 }
 
-inline static void arch_ioport_set_port_sense_mode(ioport_port_t port,
-		ioport_port_mask_t mask, enum ioport_sense pin_sense)
+inline static void arch_ioport_set_port_sense_mode(
+    __attribute__ ((unused)) ioport_port_t port,
+    __attribute__ ((unused)) ioport_port_mask_t mask,
+    __attribute__ ((unused)) enum ioport_sense pin_sense)
 {
 	// TODO
 	Assert(false);

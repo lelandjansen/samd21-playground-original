@@ -1250,7 +1250,7 @@ static inline void system_clock_source_dpll_get_config_defaults(
 
 	config->lock_time           = SYSTEM_CLOCK_SOURCE_DPLL_LOCK_TIME_DEFAULT;
 	config->filter              = SYSTEM_CLOCK_SOURCE_DPLL_FILTER_DEFAULT;
-};
+}
 
 void system_clock_source_dpll_set_config(
 		struct system_clock_source_dpll_config *const config);
