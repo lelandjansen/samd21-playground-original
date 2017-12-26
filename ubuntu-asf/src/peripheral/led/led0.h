@@ -4,11 +4,11 @@
 #include <stdint.h>
 
 #include "asf/asf.h"
-#include "peripheral/led/gpio-led-interface.h"
+#include "peripheral/led/gpio-led.h"
 
 namespace peripheral {
 
-class Led0 : public GpioLedInterface {
+class Led0 : public GpioLed {
  public:
   Led0();
   ~Led0() final;

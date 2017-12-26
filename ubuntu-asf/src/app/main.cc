@@ -1,12 +1,13 @@
 #include "asf/asf.h"
+#include "peripheral/button/sw0.h"
 #include "peripheral/led/led0.h"
 
 auto main() -> int {
   system_init();
   delay_init();
+  peripheral::Sw0 button;
   peripheral::Led0 led;
   while (true) {
-    led.Toggle();
-    delay_ms(1000);
+    button.IsPressed() ? led.On() : led.Off();
   }
 }

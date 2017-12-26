@@ -2,6 +2,8 @@
 
 #include <cassert>
 
+#include "asf/asf.h"
+
 namespace peripheral {
 
 bool Led0::instantiated_ = false;
