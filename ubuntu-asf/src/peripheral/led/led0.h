@@ -1,5 +1,5 @@
-#ifndef PERIPHERAL_LED_LED0_H_ 
-#define PERIPHERAL_LED_LED0_H_ 
+#ifndef PERIPHERAL_LED_LED0_H_
+#define PERIPHERAL_LED_LED0_H_
 
 #include <stdint.h>
 
@@ -15,10 +15,11 @@ class Led0 : public GpioLedInterface {
   auto On() const -> void final;
   auto Off() const -> void final;
   auto Toggle() const -> void final;
+
  private:
   auto SetAsOutput() const -> void;
   static bool instantiated_;
-  const uint8_t pin_ {PIN_PB30};
+  const uint8_t pin_{PIN_PB30};
 };
 
 }  // namespace peripheral
