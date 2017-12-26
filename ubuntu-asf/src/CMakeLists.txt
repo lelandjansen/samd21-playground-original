@@ -2,6 +2,12 @@ cmake_minimum_required(VERSION 3.7 FATAL_ERROR)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 set(ASF_ROOT ${CMAKE_SOURCE_DIR}/asf)
 
+find_program(CLANG_TIDY_EXE NAMES
+    clang-tidy
+    clang-tidy-5.0
+    clang-tidy-6.0)
+set(CMAKE_CXX_CLANG_TIDY "${CLANG_TIDY_EXE}")
+
 # Load toolchain definition before the project is declared or it will not work
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 include(toolchain-gnu-arm)

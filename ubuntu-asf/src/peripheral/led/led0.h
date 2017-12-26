@@ -1,8 +1,9 @@
 #ifndef PERIPHERAL_LED_LED0_H_ 
 #define PERIPHERAL_LED_LED0_H_ 
 
-//#include <stdint.h>
+#include <stdint.h>
 
+#include "asf/asf.h"
 #include "peripheral/led/gpio-led-interface.h"
 
 namespace peripheral {
@@ -17,7 +18,7 @@ class Led0 : public GpioLedInterface {
  private:
   auto SetAsOutput() const -> void;
   static bool instantiated_;
-  const /*uint8_t*/ int pin_;
+  const uint8_t pin_ {PIN_PB30};
 };
 
 }  // namespace peripheral
