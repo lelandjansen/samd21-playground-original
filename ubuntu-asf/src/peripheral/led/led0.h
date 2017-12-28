@@ -1,7 +1,7 @@
 #ifndef PERIPHERAL_LED_LED0_H_
 #define PERIPHERAL_LED_LED0_H_
 
-#include <stdint.h>
+#include <cstdint>
 
 #include "asf/asf.h"
 #include "peripheral/led/gpio-led.h"

@@ -6,6 +6,7 @@ target_include_directories(button
   INTERFACE ${CMAKE_SOURCE_DIR})
 
 add_library(led STATIC
+  #led/io1led.cc
   led/led0.cc)
 target_link_libraries(led
   ${VENDOR_LIBS})

@@ -1,7 +1,7 @@
 #ifndef PERIPHERAL_BUTTON_SW0_H_
 #define PERIPHERAL_BUTTON_SW0_H_
 
-#include <stdint.h>
+#include <cstdint>
 
 #include "asf/asf.h"
 #include "peripheral/button/gpio-button.h"
